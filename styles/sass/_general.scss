@@ -1,0 +1,39 @@
+html{
+    font-size: 125%;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: #FDC4B4;
+}
+
+section{
+    margin-top: 60px;
+}
+
+.wrapper{
+    max-width: 1300px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.skip-link {
+    position: absolute;
+    left: -1000px;
+    top: 5px;
+    z-index: 999;
+    background: white;
+    color: black;
+}
+
+.skip-link:focus {
+    left: 0;
+}
+
+h1, h2, h3, h4 p{
+    margin: 0;
+    padding: 0;
+}
+

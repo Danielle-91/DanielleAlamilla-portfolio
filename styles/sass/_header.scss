@@ -1,0 +1,36 @@
+header{
+    height: 100vh;
+    opacity: 0.90;
+    display: flex;
+    justify-content: space-between;
+}
+
+.headerIntro{
+    margin-top: 180px;
+    margin-left: 30px;
+    width: 350px;
+}
+
+.headerPic{
+    position: absolute;
+    left: 460px;
+    bottom: 0;
+    z-index: 1;
+}
+
+.circle{
+    background: #91f1cb;
+    opacity: 0.95;
+    height: 460px;
+    width: 460px;
+    border-radius: 50%;
+    box-shadow: 10px 10px 8px #f3a893;
+    margin: 0 auto;
+    margin-top: 70px;
+    margin-left: 10px;
+    position: relative;
+}
+
+a{
+    text-decoration: none;
+}
