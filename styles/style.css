@@ -370,6 +370,19 @@ a {
   margin-top: 10px;
 }
 
+.abtFlex i {
+  font-size: 2rem;
+  margin-top: 40px;
+  margin-left: 15px;
+  -webkit-transition: hover 1s;
+  transition: hover 1s;
+}
+
+.abtFlex i:hover {
+  color: #91f1cb;
+  font-size: 2.3rem;
+}
+
 .skillset .wrapper {
   -webkit-box-shadow: 10px -10px 8px #f3a893;
           box-shadow: 10px -10px 8px #f3a893;
@@ -442,6 +455,12 @@ overlay:focus-within {
 
 .overlay h3, .overlay p {
   margin-top: 20px;
+}
+
+.overlay a:hover,
+.overlay a:focus,
+.overlay a:focus-within {
+  text-decoration: underline;
 }
 
 .contact .wrapper {

@@ -35,3 +35,9 @@ overlay:focus-within{
 .overlay h3, .overlay p{
     margin-top: 20px;
 }
+
+.overlay a:hover,
+.overlay a:focus,
+.overlay a:focus-within{
+    text-decoration: underline;
+}
