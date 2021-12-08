@@ -372,15 +372,15 @@ a {
 
 .abtFlex i {
   font-size: 2rem;
-  margin-top: 40px;
+  margin-top: 25px;
   margin-left: 15px;
-  -webkit-transition: hover 1s;
-  transition: hover 1s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .abtFlex i:hover {
   color: #91f1cb;
-  font-size: 2.3rem;
+  font-size: 2.2rem;
 }
 
 .skillset .wrapper {
