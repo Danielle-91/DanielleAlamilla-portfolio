@@ -1,0 +1,15 @@
+footer{
+    background: #f3a893;
+    height: 57px;
+}
+
+footer p, footer a{
+    padding-top: 15px;
+    text-align: center;
+}
+
+footer a:hover,
+footer a:focus,
+footer a:focus-within{
+    color: rgb(250, 100, 0);
+}

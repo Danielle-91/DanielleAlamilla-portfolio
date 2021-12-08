@@ -1,3 +1,40 @@
 .contact .wrapper{
     box-shadow: 10px -10px 8px #f3a893;
 }
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+input[type=email]{
+    border: 1px solid #2577C4;
+    width: 680px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    
+}
+
+textarea{
+    border-radius: 10px;
+    border: 1px solid #2577C4;
+}
+
+
+button{
+    margin-top: 10px;
+    border: none;
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #35f3a7;
+    transition: all 0.5s;
+}
+
+button:hover,
+button:focus,
+button:focus-within{
+    color: #FDC4B4;
+    background-color: #2577C4;
+}

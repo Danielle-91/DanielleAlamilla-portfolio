@@ -25,7 +25,9 @@
     transition: all 0.3s;
 }
 
-.abtFlex i:hover{
+.abtFlex i:hover,
+.abtFlex i:focus,
+.abtFlex i:focus-within{
     color: #91f1cb;
     font-size: 2.2rem;
 }
