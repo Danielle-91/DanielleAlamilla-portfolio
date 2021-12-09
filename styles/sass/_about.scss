@@ -22,12 +22,12 @@
     font-size: 2rem;
     margin-top: 25px;
     margin-left: 15px;
-    transition: all 0.3s;
+    transition: all 0.5s;
 }
 
 .abtFlex i:hover,
 .abtFlex i:focus,
 .abtFlex i:focus-within{
-    color: #91f1cb;
-    font-size: 2.2rem;
+    color: #053766;
+    transform: scale(1.3);
 }

@@ -13,7 +13,7 @@ header{
 
 .headerPic{
     position: absolute;
-    left: 460px;
+    left: 510px;
     bottom: 0;
     z-index: 1;
 }
@@ -27,10 +27,32 @@ header{
     box-shadow: 10px 10px 8px #f3a893;
     margin: 0 auto;
     margin-top: 70px;
-    margin-left: 10px;
+    margin-left: 60px;
     position: relative;
 }
 
 a{
     text-decoration: none;
+}
+
+nav{
+    margin-top: 180px;
+}
+
+nav ul li{
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+    transition: color 1s;
+}
+
+nav ul li:hover,
+nav ul li:focus,
+nav ul li:focus-within{
+    color: #053766;
+}
+
+header i{
+    margin-top: 500px;
+    margin-right: 40px;
+    font-size: 2rem;
 }

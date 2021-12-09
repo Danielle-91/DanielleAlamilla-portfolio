@@ -12,6 +12,7 @@
 }
 
 .overlay{
+    display: flex;
     background-color: #91f1cb;
     height: 95%;
     width: 830px;
@@ -32,8 +33,17 @@ overlay:focus-within{
     box-shadow: -5px -5px 8px #f3a893;
 }
 
+.flexPic img{
+    width: 350px;
+}
+
 .overlay h3, .overlay p{
     margin-top: 20px;
+}
+
+.overlay a{
+    margin-left: 10px;
+    text-transform: uppercase;
 }
 
 .overlay a:hover,
