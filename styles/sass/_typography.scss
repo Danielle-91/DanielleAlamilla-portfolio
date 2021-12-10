@@ -1,7 +1,7 @@
 h1, h2, h3, nav ul li, button{
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 700;
-    color: #2577C4;
+    color: #00529e;
 }
 
 h1{
@@ -26,7 +26,7 @@ p, li{
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 400;
     font-size: 1rem;
-    color: #2577C4;
+    color: #00529e;
 }
 
 li{
@@ -35,4 +35,37 @@ li{
 
 button{
     font-size: 1.3rem;
+}
+
+
+// RESPONSIVE STYLING
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+    h1{
+        font-size: 2rem;
+    }
+    nav{
+        font-size: 0.7rem;
+    }
+    header p{
+        font-size: 0.9rem;
+        width: 250px;
+    }
+
+    h3{
+        font-size: 1.2rem;
+    }
+    .flexText p{
+        font-size: 0.7rem;
+    }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
 }

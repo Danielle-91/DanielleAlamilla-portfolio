@@ -42,3 +42,20 @@ button:focus-within{
     color: #FDC4B4;
     background-color: #2577C4;
 }
+
+// RESPONSIVE STYLING
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+    input[type=email]{
+        width: 650px;
+    }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+}

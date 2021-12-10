@@ -2,6 +2,21 @@
     box-shadow: -10px -10px 8px #f3a893;
 }
 
+.projects p{
+    text-align: center;
+}
+
+p .hover{
+    display: inline-block;
+    transition: transform 1s;
+}
+
+p .hover:hover,
+p .hover:focus,
+p .hover:focus-within{
+    transform: translateY(-10px);
+}
+
 .imgContainer{
     position: relative;
 }
@@ -50,4 +65,33 @@ overlay:focus-within{
 .overlay a:focus,
 .overlay a:focus-within{
     text-decoration: underline;
+}
+
+// RESPONSIVE STYLING
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+    .projectPics img{
+        width: 650px;
+    }
+
+    .overlay{
+        width: 630px;
+    }
+
+    .flexPic img{
+        width: 250px;
+    }
+
+    .flexText{
+        margin-top: 0;
+    }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
 }

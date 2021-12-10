@@ -238,7 +238,7 @@ html {
 h1, h2, h3, nav ul li, button {
   font-family: "Roboto Condensed", sans-serif;
   font-weight: 700;
-  color: #2577C4;
+  color: #00529e;
 }
 
 h1 {
@@ -262,7 +262,7 @@ p, li {
   font-family: "Roboto Condensed", sans-serif;
   font-weight: 400;
   font-size: 1rem;
-  color: #2577C4;
+  color: #00529e;
 }
 
 li {
@@ -273,6 +273,31 @@ button {
   font-size: 1.3rem;
 }
 
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  nav {
+    font-size: 0.7rem;
+  }
+
+  header p {
+    font-size: 0.9rem;
+    width: 250px;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  .flexText p {
+    font-size: 0.7rem;
+  }
+}
+/* Landscape phone to portrait tablet */
+/* Landscape phones and down */
 html {
   font-size: 125%;
 }
@@ -289,7 +314,7 @@ section {
 
 .wrapper {
   max-width: 1300px;
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   padding: 30px;
 }
@@ -318,65 +343,115 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .headerIntro {
   margin-top: 180px;
-  margin-left: 30px;
   width: 350px;
+}
+
+header i {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  justify-self: center;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
 }
 
 .headerPic {
   position: absolute;
-  left: 510px;
-  bottom: 0;
+  top: 0;
+  right: 70px;
+  top: 70px;
   z-index: 1;
 }
 
-.circle {
+.circle::before {
+  content: "";
   background: #91f1cb;
   opacity: 0.95;
-  height: 460px;
-  width: 460px;
+  height: 450px;
+  width: 450px;
   border-radius: 50%;
   -webkit-box-shadow: 10px 10px 8px #f3a893;
           box-shadow: 10px 10px 8px #f3a893;
-  margin: 0 auto;
-  margin-top: 70px;
-  margin-left: 60px;
-  position: relative;
+  position: absolute;
+  right: 80px;
+  top: 70px;
+  z-index: 0;
 }
 
 a {
   text-decoration: none;
 }
 
-nav {
-  margin-top: 180px;
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 nav ul li {
-  margin-bottom: 10px;
+  width: 100px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   font-size: 1.3rem;
-  -webkit-transition: color 1s;
-  transition: color 1s;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
 nav ul li:hover,
 nav ul li:focus,
 nav ul li:focus-within {
-  color: #053766;
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
 }
 
-header i {
-  margin-top: 500px;
-  margin-right: 40px;
-  font-size: 2rem;
-}
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+  header {
+    height: 500px;
+  }
 
+  header i {
+    font-size: 2rem;
+  }
+
+  .circle::before {
+    width: 300px;
+    height: 300px;
+    right: 90px;
+  }
+
+  .headerPic {
+    width: 420px;
+    top: 100px;
+    margin: 0;
+    padding: 0;
+  }
+
+  header i {
+    margin-bottom: 20px;
+  }
+}
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+  .headerIntro {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+
+  .header i {
+    margin-bottom: 0;
+  }
+}
+/* Landscape phones and down */
 .about .wrapper {
   -webkit-box-shadow: -10px -10px 8px #f3a893;
           box-shadow: -10px -10px 8px #f3a893;
@@ -444,15 +519,61 @@ header i {
   font-size: 2.3rem;
   text-align: center;
   margin-left: 5px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.skillset i:hover,
+.skillset i:focus,
+.skillset i:focus-within {
+  color: #053766;
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
 }
 
 .skillset span {
   display: block;
 }
 
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+  .skillset i {
+    font-size: 1rem;
+  }
+
+  .skillset ul {
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  .skillset li {
+    width: calc(100% / 4 - 10px);
+    margin: 5px;
+    padding: 5px;
+  }
+}
 .projects .wrapper {
   -webkit-box-shadow: -10px -10px 8px #f3a893;
           box-shadow: -10px -10px 8px #f3a893;
+}
+
+.projects p {
+  text-align: center;
+}
+
+p .hover {
+  display: inline-block;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+p .hover:hover,
+p .hover:focus,
+p .hover:focus-within {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
 }
 
 .imgContainer {
@@ -510,6 +631,26 @@ overlay:focus-within {
   text-decoration: underline;
 }
 
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+  .projectPics img {
+    width: 650px;
+  }
+
+  .overlay {
+    width: 630px;
+  }
+
+  .flexPic img {
+    width: 250px;
+  }
+
+  .flexText {
+    margin-top: 0;
+  }
+}
+/* Landscape phone to portrait tablet */
+/* Landscape phones and down */
 .contact .wrapper {
   -webkit-box-shadow: 10px -10px 8px #f3a893;
           box-shadow: 10px -10px 8px #f3a893;
@@ -563,6 +704,14 @@ button:focus-within {
   background-color: #2577C4;
 }
 
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+  input[type=email] {
+    width: 650px;
+  }
+}
+/* Landscape phone to portrait tablet */
+/* Landscape phones and down */
 footer {
   background: #f3a893;
   height: 57px;
