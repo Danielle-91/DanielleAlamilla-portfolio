@@ -864,6 +864,11 @@ overlay:focus-within {
     margin: 0;
     padding: 0;
   }
+
+  .flexText p {
+    font-size: 0.4rem;
+    line-height: 10px;
+  }
 }
 .contact .wrapper {
   -webkit-box-shadow: 10px -10px 8px #f3a893;
