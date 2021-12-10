@@ -151,3 +151,24 @@ nav ul li:focus-within{
         visibility: hidden;
     }
 }
+
+/*iPhone 12 (so it looks nice on my phone)*/
+
+@media (max-width: 390px){
+    nav{
+        margin-left: 20px;
+        margin-top: -20px;
+    }
+
+    .circle::before{
+        right: 50px;
+    }
+
+    .headerPic{
+        right: 30px;
+    }
+
+    .headerIntro{
+        margin: 0 auto;
+    }
+}

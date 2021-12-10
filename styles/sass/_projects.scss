@@ -98,3 +98,24 @@ overlay:focus-within{
 /* Landscape phones and down */
 @media (max-width: 480px) {
 }
+
+/*iPhone 12 (so it looks nice on my phone)*/
+
+@media (max-width: 390px){
+    .imgContainer img{
+        width: 300px;
+    }
+
+    .overlay{
+        width: 280px;
+    }
+
+    .flexPic img{
+        display: none;
+    }
+    .flexText h3,
+    .flexText p{
+        margin: 0;
+        padding: 0;
+    }
+}

@@ -58,3 +58,12 @@
         margin: 0 auto;
     } 
 }
+
+/*iPhone 12 (so it looks nice on my phone)*/
+
+@media (max-width: 390px){
+    .abtPic{
+        width: 300px;
+        object-fit: fill;
+    }
+}

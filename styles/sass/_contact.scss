@@ -59,3 +59,12 @@ button:focus-within{
 /* Landscape phones and down */
 @media (max-width: 480px) {
 }
+
+/*iPhone 12 (so it looks nice on my phone)*/
+
+@media (max-width: 390px){
+    input[type=email],
+    textarea{
+        width: 100%;
+    }
+}

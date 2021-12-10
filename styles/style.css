@@ -308,6 +308,24 @@ button {
     font-size: 0.8rem;
   }
 }
+/*iPhone 12 (so it looks nice on my phone)*/
+@media (max-width: 390px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+
+  h3 {
+    font-size: 0.9rem;
+  }
+
+  .flexText p {
+    font-size: 0.7rem;
+  }
+}
 html {
   font-size: 125%;
 }
@@ -538,6 +556,25 @@ nav ul li:focus-within {
     visibility: hidden;
   }
 }
+/*iPhone 12 (so it looks nice on my phone)*/
+@media (max-width: 390px) {
+  nav {
+    margin-left: 20px;
+    margin-top: -20px;
+  }
+
+  .circle::before {
+    right: 50px;
+  }
+
+  .headerPic {
+    right: 30px;
+  }
+
+  .headerIntro {
+    margin: 0 auto;
+  }
+}
 .about .wrapper {
   -webkit-box-shadow: -10px -10px 8px #f3a893;
           box-shadow: -10px -10px 8px #f3a893;
@@ -607,6 +644,14 @@ nav ul li:focus-within {
     margin: 0 auto;
   }
 }
+/*iPhone 12 (so it looks nice on my phone)*/
+@media (max-width: 390px) {
+  .abtPic {
+    width: 300px;
+    -o-object-fit: fill;
+       object-fit: fill;
+  }
+}
 .skillset .wrapper {
   -webkit-box-shadow: 10px -10px 8px #f3a893;
           box-shadow: 10px -10px 8px #f3a893;
@@ -665,6 +710,12 @@ nav ul li:focus-within {
     width: calc(100% / 4 - 10px);
     margin: 5px;
     padding: 5px;
+  }
+}
+/*iPhone 12 (so it looks nice on my phone)*/
+@media (max-width: 390px) {
+  .skillset li {
+    width: calc(100% / 3 - 10px);
   }
 }
 .projects .wrapper {
@@ -771,6 +822,26 @@ overlay:focus-within {
   }
 }
 /* Landscape phones and down */
+/*iPhone 12 (so it looks nice on my phone)*/
+@media (max-width: 390px) {
+  .imgContainer img {
+    width: 300px;
+  }
+
+  .overlay {
+    width: 280px;
+  }
+
+  .flexPic img {
+    display: none;
+  }
+
+  .flexText h3,
+.flexText p {
+    margin: 0;
+    padding: 0;
+  }
+}
 .contact .wrapper {
   -webkit-box-shadow: 10px -10px 8px #f3a893;
           box-shadow: 10px -10px 8px #f3a893;
@@ -832,6 +903,13 @@ button:focus-within {
 }
 /* Landscape phone to portrait tablet */
 /* Landscape phones and down */
+/*iPhone 12 (so it looks nice on my phone)*/
+@media (max-width: 390px) {
+  input[type=email],
+textarea {
+    width: 100%;
+  }
+}
 footer {
   background: #f3a893;
   height: 57px;

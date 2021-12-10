@@ -53,3 +53,11 @@
         padding: 5px;
     }
 }
+
+/*iPhone 12 (so it looks nice on my phone)*/
+
+@media (max-width: 390px){
+    .skillset li{
+        width: calc(100% / 3 - 10px);
+    }
+}
