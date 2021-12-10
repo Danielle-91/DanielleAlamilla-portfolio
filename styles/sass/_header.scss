@@ -135,4 +135,19 @@ nav ul li:focus-within{
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
+    header{
+        height: 600px;
+    }
+
+    .headerIntro{
+        text-align: center;
+    }
+
+    .headerIntro p{
+        margin: 0 auto;
+    }
+
+    header i {
+        visibility: hidden;
+    }
 }

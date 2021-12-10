@@ -324,17 +324,16 @@ section {
   padding: 30px;
 }
 
-.skip-link {
+.skip-to-content-link {
+  left: 50%;
   position: absolute;
-  left: -1000px;
-  top: 5px;
-  z-index: 999;
-  background: white;
-  color: black;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
 }
 
-.skip-link:focus {
-  left: 0;
+.skip-to-content-link:focus {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
 }
 
 h1, h2, h3, h4 p {
@@ -502,6 +501,23 @@ nav ul li:focus-within {
   }
 }
 /* Landscape phones and down */
+@media (max-width: 480px) {
+  header {
+    height: 600px;
+  }
+
+  .headerIntro {
+    text-align: center;
+  }
+
+  .headerIntro p {
+    margin: 0 auto;
+  }
+
+  header i {
+    visibility: hidden;
+  }
+}
 .about .wrapper {
   -webkit-box-shadow: -10px -10px 8px #f3a893;
           box-shadow: -10px -10px 8px #f3a893;
