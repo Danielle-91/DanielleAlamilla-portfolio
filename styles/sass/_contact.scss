@@ -52,12 +52,12 @@ button:focus-within{
     }
 }
 
-/* Landscape phone to portrait tablet */
-@media (max-width: 768px) {
-}
-
 /* Landscape phones and down */
 @media (max-width: 480px) {
+    input[type=email],
+    textarea{
+        width: 100%;
+    }
 }
 
 /*iPhone 12 (so it looks nice on my phone)*/
