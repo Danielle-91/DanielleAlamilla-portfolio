@@ -7,7 +7,7 @@ header{
 
 .headerIntro{
     margin-top: 180px;
-    width: 350px;
+    margin-left: 50px;
 }
 
 header i{
@@ -50,6 +50,7 @@ nav{
 }
 nav ul{
     display: flex;
+    justify-content: flex-end;
 }
 
 nav ul li{
