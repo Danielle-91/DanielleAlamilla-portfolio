@@ -303,6 +303,11 @@ button {
   }
 }
 /* Landscape phones and down */
+@media (max-width: 480px) {
+  .skillset li {
+    font-size: 0.8rem;
+  }
+}
 html {
   font-size: 125%;
 }
@@ -324,16 +329,31 @@ section {
   padding: 30px;
 }
 
-.skip-to-content-link {
-  left: 50%;
+a.skip-main {
+  left: -999px;
   position: absolute;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: -999;
 }
 
-.skip-to-content-link:focus {
-  -webkit-transform: translateY(0%);
-          transform: translateY(0%);
+a.skip-main:focus, a.skip-main:active {
+  color: #fff;
+  background-color: #000;
+  left: auto;
+  top: auto;
+  width: 30%;
+  height: auto;
+  overflow: auto;
+  margin: 10px 35%;
+  padding: 5px;
+  border-radius: 15px;
+  border: 4px solid yellow;
+  text-align: center;
+  font-size: 1.2em;
+  z-index: 999;
 }
 
 h1, h2, h3, h4 p {
