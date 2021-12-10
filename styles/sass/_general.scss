@@ -14,7 +14,7 @@ section{
 
 .wrapper{
     max-width: 1300px;
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
     padding: 30px;
 }
@@ -37,3 +37,15 @@ h1, h2, h3, h4 p{
     padding: 0;
 }
 
+// RESPONSIVE STYLING
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+    .wrapper{
+        width: 90%;
+    }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+}

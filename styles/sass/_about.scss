@@ -31,3 +31,30 @@
     color: #053766;
     transform: scale(1.3);
 }
+
+// RESPONSIVE STYLING
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+    .abtFlex{
+        width: 100%;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .abtPic{
+        margin: 0 auto;
+    }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+    header{
+        width: 100%;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+    nav ul{
+        margin: 0 auto;
+    } 
+}

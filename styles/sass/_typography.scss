@@ -63,7 +63,9 @@ button{
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
-
+    nav ul li a{
+        font-size: 0.9rem;
+    }
 }
 
 /* Landscape phones and down */

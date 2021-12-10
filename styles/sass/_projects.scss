@@ -90,6 +90,9 @@ overlay:focus-within{
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
+    .projectPics{
+        padding: 0;
+    }
 }
 
 /* Landscape phones and down */
