@@ -5,21 +5,102 @@ header{
     justify-content: space-around;
 }
 
-.btn-toggle{
-    width: 350px;
-    background-color: black;
+.navBar{
+    background-color: #2E2551;
+    display: flex;
+    min-width: auto;
+    width: 100%;
+    height: 70px;
+    padding: 10px;
+    justify-content: space-around;
+    position: fixed;
+    z-index: 3;
 }
+.navBar img{
+    width: 60px;
+    height: 60px;
+    margin-left: 30%;
+}
+
+input{
+    display: none;
+}
+
+input:checked + label{
+    background: #c0c0c0;
+}
+
+input:checked + label .fa-sun{
+    transform: translateX(-43px) rotate(160deg);
+    opacity: 0;
+}
+
+input:checked + label .fa-moon{
+    transform: translateX(0) rotate(0);
+    opacity: 1;
+}
+
+input:checked + label .ball{
+    transform: translateX(40px);
+    background: white;
+}
+
+label{
+    display: flex;
+    width: 75px;
+    height: 35px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 6px;
+    background: #222;
+    border-radius: 50px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s;
+}
+
+label i{
+    font-size: 1rem;
+}
+
+label .fa-sun{
+    color: gold;
+    transition: 0.3s;
+    opacity: 1;
+}
+
+label .fa-moon{
+    color: white;
+    transition: 0.3s;
+    opacity: 0;
+    transform: translateX(43px) rotate(250deg);
+}
+
+label .ball{
+    position: absolute;
+    display: block;
+    width: 25px;
+    height: 25px;
+    top: 5px;
+    left: 5px;
+    background: white;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
 .headerIntro{
     margin-top: 180px;
     margin-left: 50px;
+    width: 400px;
 }
 
-header i{
+.fas{
     align-self: flex-end;
-    justify-self: center;
+    padding-right: 45%;
     margin-bottom: 40px;
     font-size: 2.5rem;
     animation: floating 3s ease-in-out infinite;
+    z-index: 5;
 }
 
 @keyframes floating {

@@ -241,12 +241,16 @@ h1, h2, h3, nav ul li, button {
   color: let(color);
 }
 
+a:visited {
+  color: let(color);
+}
+
 h1 {
   font-size: 3.3rem;
 }
 
-nav ul li {
-  font-size: 1.5rem;
+nav ul li a {
+  font-size: 1rem;
 }
 
 h2 {
@@ -353,9 +357,17 @@ body.dark-theme {
     background-color: #2E2551;
   }
 
+  a:visited {
+    color: white;
+  }
+
   body.light-theme {
     color: #00529e;
     background-color: #FDC4B4;
+  }
+
+  a.light-theme:visited {
+    color: black;
   }
 }
 body {
@@ -422,24 +434,122 @@ header {
       justify-content: space-around;
 }
 
-.btn-toggle {
-  width: 350px;
-  background-color: black;
+.navBar {
+  background-color: #2E2551;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: auto;
+  width: 100%;
+  height: 70px;
+  padding: 10px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: fixed;
+  z-index: 3;
+}
+
+.navBar img {
+  width: 60px;
+  height: 60px;
+  margin-left: 30%;
+}
+
+input {
+  display: none;
+}
+
+input:checked + label {
+  background: #c0c0c0;
+}
+
+input:checked + label .fa-sun {
+  -webkit-transform: translateX(-43px) rotate(160deg);
+          transform: translateX(-43px) rotate(160deg);
+  opacity: 0;
+}
+
+input:checked + label .fa-moon {
+  -webkit-transform: translateX(0) rotate(0);
+          transform: translateX(0) rotate(0);
+  opacity: 1;
+}
+
+input:checked + label .ball {
+  -webkit-transform: translateX(40px);
+          transform: translateX(40px);
+  background: white;
+}
+
+label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 75px;
+  height: 35px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 6px;
+  background: #222;
+  border-radius: 50px;
+  cursor: pointer;
+  position: relative;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+label i {
+  font-size: 1rem;
+}
+
+label .fa-sun {
+  color: gold;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  opacity: 1;
+}
+
+label .fa-moon {
+  color: white;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  opacity: 0;
+  -webkit-transform: translateX(43px) rotate(250deg);
+          transform: translateX(43px) rotate(250deg);
+}
+
+label .ball {
+  position: absolute;
+  display: block;
+  width: 25px;
+  height: 25px;
+  top: 5px;
+  left: 5px;
+  background: white;
+  border-radius: 50%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .headerIntro {
   margin-top: 180px;
   margin-left: 50px;
+  width: 400px;
 }
 
-header i {
+.fas {
   -ms-flex-item-align: end;
       align-self: flex-end;
-  justify-self: center;
+  padding-right: 45%;
   margin-bottom: 40px;
   font-size: 2.5rem;
   -webkit-animation: floating 3s ease-in-out infinite;
           animation: floating 3s ease-in-out infinite;
+  z-index: 5;
 }
 
 @-webkit-keyframes floating {
@@ -809,6 +919,7 @@ p .hover:focus-within {
 }
 
 .projectPics img {
+  border-radius: 50%;
   width: 850px;
   margin: 0 auto;
   padding: 10px;
@@ -958,13 +1069,14 @@ input[type=email] {
   border: 1px solid #2577C4;
   width: 680px;
   margin-bottom: 15px;
-  padding: 10px;
+  padding: 15px;
   border-radius: 10px;
 }
 
 textarea {
   border-radius: 10px;
   border: 1px solid #2577C4;
+  padding: 15px;
 }
 
 button {

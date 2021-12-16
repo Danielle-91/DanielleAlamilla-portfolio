@@ -12,7 +12,7 @@ if (currentTheme == "dark") {
     // Otherwise, if the user's preference in localStorage is light...
     } else if (currentTheme == "light") {
   // ...let's toggle the .light-theme class on the body
-    ocument.body.classList.toggle("light-mode");
+    document.body.classList.toggle("light-mode");
     
 
 // Listen for a click on the button 
@@ -22,7 +22,7 @@ if (currentTheme == "dark") {
         // ...then toggle the light mode class
         document.body.classList.toggle("light-mode");
         // ...but use .dark-mode if the .light-mode class is already on the body,
-        let theme = document.body.classList.contains("light-mode") ? "light" : "dark";
+        let theme = document.body.classList.contains("light-mode") ? "light" : "dark"};
         else {
         // Otherwise, let's do the same thing, but for .dark-mode
         document.body.classList.toggle("dark-mode");
@@ -30,4 +30,4 @@ if (currentTheme == "dark") {
         
         // Finally, let's save the current preference to localStorage to keep using it
     localStorage.setItem("theme", theme);
-});
+};

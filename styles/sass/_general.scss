@@ -24,11 +24,17 @@ body.dark-theme{
     color: #F2DFD7;
     background-color: #2E2551;
     }
+    a:visited{
+        color: white;
+    }
 
     body.light-theme {
     color: #00529e;
     background-color: #FDC4B4;
-    
+    }
+
+    a.light-theme:visited{
+        color: black;
     }
 }
 
