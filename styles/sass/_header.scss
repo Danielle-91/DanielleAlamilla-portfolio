@@ -6,13 +6,13 @@ header{
 }
 
 .navBar{
-    background-color: #2E2551;
+    background-color: let(--color);
     display: flex;
-    min-width: auto;
     width: 100%;
     height: 70px;
     padding: 10px;
-    justify-content: space-around;
+    flex-basis: 1200px;
+    justify-content: space-between;
     position: fixed;
     top: 0;
     z-index: 3;
@@ -20,8 +20,10 @@ header{
 .navBar img{
     width: 60px;
     height: 60px;
-    margin-left: 30%;
+    justify-content: center;
 }
+
+// Dark mode toggle
 
 input{
     display: none;
@@ -89,13 +91,14 @@ label .ball{
     transition: 0.3s;
 }
 
+// Main header stuff
 .headerIntro{
     margin-top: 180px;
     margin-left: 50px;
     width: 400px;
 }
 
-.fas{
+.fa-angle-double-down{
     align-self: flex-end;
     padding-right: 45%;
     margin-bottom: 40px;
@@ -139,14 +142,21 @@ a{
 
 nav{
     height: 50px;
-    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+nav i{
+    font-size: 1.7rem;
 }
 nav ul{
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 nav ul li{
+    display: none;
     width: 100px;
     justify-content: space-between;
     font-size: 1.3rem;
