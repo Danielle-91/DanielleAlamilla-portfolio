@@ -4,6 +4,8 @@
 
 html{
     font-size: 125%;
+    margin: 0;
+    padding: 0;
 }
 
 body{
@@ -25,6 +27,8 @@ body.dark-mode{
     --background-color: #2E2551;
     }
 
+
+
     a:visited{
         color: white;
     }
@@ -33,6 +37,8 @@ body.dark-mode{
     --color: #00529e;
     --background-color: #FDC4B4;
     }
+
+
 
     a.light-theme:visited{
         color: black;
