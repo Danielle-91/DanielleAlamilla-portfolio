@@ -444,8 +444,6 @@ header {
   width: 100%;
   height: 70px;
   padding: 10px;
-  -ms-flex-preferred-size: 1200px;
-      flex-basis: 1200px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -548,12 +546,11 @@ label .ball {
 .fa-angle-double-down {
   -ms-flex-item-align: end;
       align-self: flex-end;
-  padding-right: 45%;
+  margin-right: 50%;
   margin-bottom: 40px;
   font-size: 2.5rem;
   -webkit-animation: floating 3s ease-in-out infinite;
           animation: floating 3s ease-in-out infinite;
-  z-index: 5;
 }
 
 @-webkit-keyframes floating {
@@ -589,7 +586,7 @@ label .ball {
   position: absolute;
   top: 0;
   right: 70px;
-  top: 70px;
+  top: 75px;
   z-index: 1;
 }
 
@@ -610,49 +607,6 @@ label .ball {
 
 a {
   text-decoration: none;
-}
-
-nav {
-  height: 50px;
-  margin: 0;
-  padding: 0;
-}
-
-nav i {
-  font-size: 1.7rem;
-}
-
-nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-
-nav ul li {
-  display: none;
-  width: 100px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  font-size: 1.3rem;
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
-}
-
-nav ul li:hover,
-nav ul li:focus,
-nav ul li:focus-within {
-  -webkit-transform: scale(1.3);
-          transform: scale(1.3);
 }
 
 /* Portrait tablet and small desktops */
@@ -907,6 +861,19 @@ nav ul li:focus-within {
 .projects .wrapper {
   -webkit-box-shadow: -10px -10px 8px #f3a893;
           box-shadow: -10px -10px 8px #f3a893;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .projects p {
@@ -929,67 +896,53 @@ p .hover:focus-within {
           transform: translateY(-10px);
 }
 
-.imgContainer {
-  position: relative;
+.projectContainer {
+  margin: 10px auto;
+  z-index: 1;
 }
 
-.projectPics img {
+.card {
+  margin-bottom: 90px;
+  width: 600px;
+  height: 400px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.item img {
   border-radius: 10px;
-  width: 850px;
-  margin: 0 auto;
-  margin: 30px;
-  -webkit-transition: all 1s;
-  transition: all 1s;
+  width: 600px;
+  height: 400px;
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 
-.projectPics img:hover {
+.projectContainer .card:hover {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
 }
 
-.overlay {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #ccf1e8;
-  height: 95%;
-  width: 830px;
-  padding: 30px;
-  margin: 10px;
-  text-align: center;
+.item {
   position: absolute;
-  z-index: 1;
-  top: 0;
-  opacity: 0;
-  -webkit-transition: opacity 1s;
-  transition: opacity 1s;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 
-.overlay:hover,
-.overlay:focus,
-overlay:focus-within {
-  opacity: 0.85;
-  -webkit-box-shadow: -5px -5px 8px #f3a893;
-          box-shadow: -5px -5px 8px #f3a893;
-}
-
-.flexPic img {
-  width: 350px;
-}
-
-.overlay h3, .overlay p {
-  margin-top: 20px;
-}
-
-.overlay a {
-  margin-left: 10px;
-  text-transform: uppercase;
-}
-
-.overlay a:hover,
-.overlay a:focus,
-.overlay a:focus-within {
-  text-decoration: underline;
+.back {
+  border-radius: 10px;
+  display: block;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 30px;
+  color: white;
+  text-align: center;
+  background-color: black;
 }
 
 /* Portrait tablet and small desktops */
