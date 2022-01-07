@@ -235,7 +235,7 @@ html {
   overflow: hidden;
 }
 
-h1, h2, h3, nav ul li, button {
+h1, h2, h3, nav ul li, .menuItems li a, button {
   font-family: "Roboto Condensed", sans-serif;
   font-weight: 700;
   color: let(--color);
@@ -449,12 +449,12 @@ header {
           justify-content: space-between;
   position: fixed;
   top: 0;
-  z-index: 10;
 }
 
 .navBar img {
   width: 60px;
   height: 60px;
+  margin-left: 20px;
 }
 
 input[type=checkbox] {
@@ -535,6 +535,124 @@ label .ball {
   border-radius: 50%;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+
+#burgerBox {
+  position: absolute;
+  display: block;
+  height: 32px;
+  width: 32px;
+  top: 20px;
+  right: 20px;
+  z-index: 5;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.burgerLines {
+  display: block;
+  height: 26px;
+  width: 32px;
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.burgerLines .line {
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 10px;
+  background-color: black;
+}
+
+.burgerLines .line1 {
+  -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  transition: -webkit-transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+}
+
+.burgerLines .line2 {
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+}
+
+.burgerLines .line3 {
+  -webkit-transform-origin: 0% 100%;
+          transform-origin: 0% 100%;
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  transition: -webkit-transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+}
+
+.menuItems {
+  padding-top: 120px;
+  background: #ece5e5;
+  height: 100vh;
+  width: 100%;
+  -webkit-transform: translate(150%);
+          transform: translate(150%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: -40px;
+  padding-left: 50px;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  text-align: center;
+}
+
+.menuItems li {
+  margin-bottom: 1.2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.menuItems li a {
+  color: #00529e;
+}
+
+#burgerBox:checked ~ .menuItems {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+#burgerBox:checked ~ .burgerLines .line1 {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+#burgerBox:checked ~ .burgerLines .line2 {
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+}
+
+#burgerBox:checked ~ .burgerLines .line3 {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .headerIntro {

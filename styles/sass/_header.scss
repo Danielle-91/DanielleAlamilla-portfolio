@@ -14,11 +14,11 @@ header{
     justify-content: space-between;
     position: fixed;
     top: 0;
-    z-index: 10;
 }
 .navBar img{
     width: 60px;
     height: 60px;
+    margin-left: 20px;
 }
 
 // Dark mode toggle
@@ -90,8 +90,93 @@ label .ball{
 }
 
 // Burger menu
+#burgerBox{
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 32px;
+    top: 20px;
+    right: 20px;
+    z-index: 5;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.burgerLines{
+    display: block;
+    height: 26px;
+    width: 32px;
+    position: absolute;
+    top: 17px;
+    right: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.burgerLines .line{
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: black;
+}
+
+.burgerLines .line1{
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+}
+
+.burgerLines .line2{
+    transition: transform 0.2s ease-in-out;
+}
+
+.burgerLines .line3{
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+}
 
 
+.menuItems{
+    padding-top: 120px;
+    // box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+    background: rgb(236, 229, 229);
+    height: 100vh;
+    width: 100%;
+    transform: translate(150%);
+    display: flex;
+    flex-direction: column;
+    margin-left: -40px;
+    padding-left: 50px;
+    transition: transform 0.5s ease-in-out;
+    text-align: center;
+}
+
+.menuItems li{
+    margin-bottom: 1.2rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.menuItems li a{
+    color: #00529e;
+}
+#burgerBox:checked ~ .menuItems{
+    transform: translateX(0);
+}
+
+#burgerBox:checked ~ .burgerLines .line1{
+    transform: rotate(45deg);
+}
+
+#burgerBox:checked ~ .burgerLines .line2{
+    transform: scaleY(0);
+}
+
+#burgerBox:checked ~ .burgerLines .line3{
+    transform: rotate(-45deg);
+}
 
 // Main header stuff
 .headerIntro{
