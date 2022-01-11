@@ -452,9 +452,11 @@ header {
 }
 
 .navBar img {
+  position: absolute;
   width: 60px;
   height: 60px;
-  margin-left: 20px;
+  left: 50%;
+  right: 50%;
 }
 
 input[type=checkbox] {
