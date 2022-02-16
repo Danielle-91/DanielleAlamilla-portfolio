@@ -27,14 +27,20 @@
                 
 
             <img src="./assets/dark-mode-logo.png" alt="capital D in centre of square">
-            <nav>
+
+            <div class="burgerWrapper">
+                
+            </div>
+                
+            <!-- <nav>
+                <i class="fas fa-bars"></i>
                 <ul>
                     <li><a href="#about">About</a></li>
                     <li><a href="#skillset">Skillset</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
-            </nav>
+            </nav> -->
         </div>
             
         <div class="headerIntro">
@@ -89,80 +95,66 @@
         <section class="projects" id="projects">
             <div class="wrapper">
                 <h2>Projects</h2>
-                <p><span class="hover">Hover</span> to learn more</p>
-                <ul class="projectPics">
-                    <li class="imgContainer">
-                        <img src="./assets/recordplay.png" alt="Photo of a cassette tape being tossed in the air outside, text below it says 'Record plus play'">
+                <p>A section in progress. <span class="hover">Hover</span> to learn more.</p>
+                <div class="projectContainer">
 
-                        <div class="overlay">
-                            <div class="flexPic">
-                                <img src="./assets/mixtapeSG.png" alt="cassette tape design displays names of songs by rap group A Tribe Called Quest">
-                            </div>
-                            <div class="flexText">
-                                <h3>Record + Play</h3>
-                            <p>Record + Play is a mixtape-maker created in React using the iTunes API. Type in the name of your favourite artists and it will return a list of ten of their songs for you to use as your very own mixtape. I'm excited to play around with this one some more and add to its functionality!</p>
-                            <a href="https://github.com/Danielle-91/Danielle-Alamilla-Project-3">Github</a>
-                            <a href="https://kind-ardinghelli-c4eb63.netlify.app/">Live Site</a>
-                            </div>
-                            
+                    <div class="card">
+                        <div class="item front">
+                            <img src="./assets/recordplay.png"
+                                alt="Photo of a cassette tape being tossed in the air outside, text below it says 'Record plus play'">
                         </div>
-                    
-                    </li>
 
-                    <li class="imgContainer">
-                        <img src="./assets/aroundtheworld.png" alt="Picture of a country's flag with the words 'What flag is this?' above it. Below are 4 multiple choice buttons.">
+                        <div class="item back">
+                            <h3>Record + Play</h3>
+                            
+                            <p>Record + Play is a mixtape-maker created in React using the iTunes API. Type in the name of your favourite artists
+                                and it will return a list of ten of their songs for you to use as your very own mixtape. I'm excited to play around
+                                with this one some more and add to its functionality!</p>
+                                <a href="https://github.com/Danielle-91/Danielle-Alamilla-Project-3">Github</a>
+                                
+                                <a href="https://kind-ardinghelli-c4eb63.netlify.app/">Live Site</a>
+                        </div>
+                    </div>
 
-                        <div class="overlay">
-                            <div class="flexPic">
-                                <img src="./assets/quizSG.png" alt="flag question with wrong answer highlighted red and correct answer highlighted green">
-                            </div>
-                            <div class="flexText">
-                                <h3>Around the World Flag Quiz</h3>
-                            <p>Did you know at least one colour from the Olympic rings can be found on the flag of every country in the world? There are five colours but many, many, many...MANY flags. Kelvin Lee and I created a quiz to test your knowledge on these flags using vanilla JavaScript and the <a href="https://restcountries.com/">Rest Countries API.</a> Give it a try!</p>
+                    <div class="card">
+                        <div class="item front">
+                            <img src="./assets/aroundtheworld.png"
+                                alt="Picture of a country's flag with the words 'What flag is this?' above it. Below are 4 multiple choice buttons.">
+                        </div>
+
+                        <div class="item back">
+                            <h3>Around the World Flag Quiz</h3>
+                            
+                            <p>Did you know at least one colour from the Olympic rings can be found on the flag of every country in the world? There
+                                are five colours but many, many, many...MANY flags. Kelvin Lee and I created a quiz to test your knowledge on these
+                                flags using vanilla JavaScript and the <a href="https://restcountries.com/">Rest Countries API.</a> Give it a try!
+                            </p>
+                            
                             <a href="https://github.com/TheNoBonesZone/aroundTheWorldQuiz">Github</a>
+                            
                             <a href="https://aroundtheworldwithdk.netlify.app/">Live Site</a>
-                            </div>
-                            
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="item front">
+                            <img src="./assets/captured.png"
+                                alt="A header image of a film camera with website title below. The side of another camera is seen to the right.">
                         </div>
 
-                    </li>
-
-                    <li class="imgContainer">
-                        <img src="./assets/memesite.png" alt="A logo that says 'Memes in a Giffy' above a home page">
-
-                        <div class="overlay">
-                            <div class="flexPic">
-                                <img src="./assets/memeSG.png" alt="picture of spiderman giving thumbs up with text 'when your code works again">
-                            </div>
-                            <div class="flexText">
-                                <h3>Meme in a Giffy</h3>
-                            <p>As a Millenial™, I enjoy expressing moods and relatable feelings through gifs. As part of a team with Long Vuong, Camila Aparicio, and Dre Nnamdi, we created Memes in a Giffy based on a client brief. It's a React app that uses the<a href="https://developers.giphy.com/docs/api/">Giphy API</a> to bring users a gif based on a searched term, create their own meme using their selected gif, then display on our Home page (stored with Firebase) for others to upvote or downvote accordingly.</p>
-                            <a href="https://github.com/worst-group-ever/MemesInAGiffy">Github</a>
-                            <a href="https://inspiring-ramanujan-649d17.netlify.app/">Live Site</a>
-                            </div>
+                        <div class="item back">
+                            <h3>Captured</h3>
                             
-                        </div>
-
-                    </li>
-
-                    <li class="imgContainer">
-                        <img src="./assets/captured.png" alt="A header image of a film camera with website title below. The side of another camera is seen to the right.">
-
-                        <div class="overlay">
-                            <div class="flexPic">
-                                <img src="./assets/capturedSG.png" alt="section of website with picture of camera on the left and some filler text on the right">
-                            </div>
-                            <div class="flexText">
-                                <h3>Captured</h3>
-                            <p>Captured is a multi-page PSD conversion created from a client brief and design files, made responsive using Flexbox layout. My very first Bootcamp project!</p>
+                            <p>Captured is a multi-page PSD conversion created from a client brief and design files, made responsive using Flexbox
+                                layout.</p>
+                            
                             <a href="https://github.com/Danielle-91/Danielle-Alamilla-Project-1">Github</a>
-                            <a href="https://jovial-liskov-ad8802.netlify.app/">Live Site</a>
-                            </div>
                             
+                            <a href="https://jovial-liskov-ad8802.netlify.app/">Live Site</a>
                         </div>
-                    
-                    </li>
-                </ul>
+                    </div>
+
+                </div>
             </div>
         </section>
 
@@ -174,7 +166,7 @@
                     <label class="sr-only">
                         Email:
                     </label>
-                        <input type="email" name="_replyto" placeholder="email@email.com">
+                        <input type="email" name="_replyto" placeholder="example@email.com">
                     <label class="sr-only">
                         Message:
                     </label>
@@ -189,6 +181,6 @@
     <footer>
         <p>Created by Danielle Alamilla</p>
     </footer>
-    <script src="dark.mode.js"></script>
+    <script src="./dark-mode.js"></script>
 </body>
 </html>

@@ -1,11 +1,11 @@
 h1, h2, h3, nav ul li, button{
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 700;
-    color: let(color);
+    color: let(--color);
 }
 
 a:visited{
-    color: let(color);
+    color: let(--color);
 }
 
 h1{

@@ -4,8 +4,9 @@
 
 html{
     font-size: 125%;
+    margin: 0;
+    padding: 0;
 }
-
 body{
     margin: 0;
     padding: 0;
@@ -13,7 +14,7 @@ body{
     color: #00529e;
 }
 
-body.dark-theme{
+body.dark-mode{
     background-color: #2E2551;
     color: #F2DFD7;
 }
@@ -21,17 +22,22 @@ body.dark-theme{
 @media (prefers-color-scheme: dark) {
   /* defaults to dark theme */
     body {
-    color: #F2DFD7;
-    background-color: #2E2551;
+    --color: #F2DFD7;
+    --background-color: #2E2551;
     }
+
+
+
     a:visited{
         color: white;
     }
 
     body.light-theme {
-    color: #00529e;
-    background-color: #FDC4B4;
+    --color: #00529e;
+    --background-color: #FDC4B4;
     }
+
+
 
     a.light-theme:visited{
         color: black;
@@ -39,7 +45,7 @@ body.dark-theme{
 }
 
 body{
-    background: let(background-color);
+    background: let(--background-color);
 }
 
 section{

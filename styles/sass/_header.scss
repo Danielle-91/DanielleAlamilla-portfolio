@@ -6,23 +6,24 @@ header{
 }
 
 .navBar{
-    background-color: #2E2551;
+    background-color: let(--background-color);
     display: flex;
-    min-width: auto;
     width: 100%;
     height: 70px;
     padding: 10px;
-    justify-content: space-around;
+    justify-content: space-between;
     position: fixed;
-    z-index: 3;
+    top: 0;
+    z-index: 10;
 }
 .navBar img{
     width: 60px;
     height: 60px;
-    margin-left: 30%;
 }
 
-input{
+// Dark mode toggle
+
+input[type="checkbox"]{
     display: none;
 }
 
@@ -88,19 +89,24 @@ label .ball{
     transition: 0.3s;
 }
 
+// Burger menu
+
+
+
+// Main header stuff
 .headerIntro{
     margin-top: 180px;
     margin-left: 50px;
     width: 400px;
 }
 
-.fas{
+.fa-angle-double-down{
     align-self: flex-end;
-    padding-right: 45%;
+    // justify-content: center;
+    margin-right: 50%;
     margin-bottom: 40px;
     font-size: 2.5rem;
     animation: floating 3s ease-in-out infinite;
-    z-index: 5;
 }
 
 @keyframes floating {
@@ -114,7 +120,7 @@ label .ball{
     position: absolute;
     top: 0;
     right: 70px;
-    top: 70px;
+    top: 75px;
     z-index: 1;
 }
 
@@ -135,29 +141,6 @@ label .ball{
 a{
     text-decoration: none;
 }
-
-nav{
-    height: 50px;
-    width: 100%;
-}
-nav ul{
-    display: flex;
-    justify-content: flex-end;
-}
-
-nav ul li{
-    width: 100px;
-    justify-content: space-between;
-    font-size: 1.3rem;
-    transition: transform 0.5s;
-}
-
-nav ul li:hover,
-nav ul li:focus,
-nav ul li:focus-within{
-    transform: scale(1.3);
-}
-
 
 // RESPONSIVE STYLING
 
