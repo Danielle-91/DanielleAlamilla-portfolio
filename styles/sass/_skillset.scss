@@ -1,5 +1,5 @@
 .skillset .wrapper{
-    box-shadow: 10px -10px 8px #f3a893;
+    border-radius: 10px;
 }
 
 .skillset ul{
@@ -11,12 +11,14 @@
 }
 
 .skillset li{
+    color: #073200;
     width: calc(100% / 6 - 20px);
     margin: 10px;
     padding: 10px;
     
 }
 .skillset i{
+    color: #073200;
     font-size: 2.3rem;
     text-align: center;
     margin-left: 5px;
@@ -26,7 +28,6 @@
 .skillset i:hover,
 .skillset i:focus,
 .skillset i:focus-within{
-    color: #053766;
     transform: scale(1.3);
 }
 

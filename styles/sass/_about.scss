@@ -1,5 +1,5 @@
 .about .wrapper{
-    box-shadow: -10px -10px 8px #f3a893;
+    border-radius: 10px;
 }
 
 .abtFlex{
@@ -11,6 +11,7 @@
 
 .abtFlex p{
     margin-left: 20px;
+    color: #073200;
 }
 
 .abtFlex span{
@@ -28,7 +29,7 @@
 .abtFlex i:hover,
 .abtFlex i:focus,
 .abtFlex i:focus-within{
-    color: #053766;
+    color: #073200;
     transform: scale(1.3);
 }
 

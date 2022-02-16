@@ -1,5 +1,5 @@
 .contact .wrapper{
-    box-shadow: 10px -10px 8px #f3a893;
+    border-radius: 10px;
 }
 
 .contact p{
@@ -32,15 +32,16 @@ button{
     width: 100px;
     height: 50px;
     border-radius: 10px;
-    background-color: #35f3a7;
+    background-color: #073200;
+    color: #FEFEF4;
     transition: all 0.5s;
 }
 
 button:hover,
 button:focus,
 button:focus-within{
-    color: #FDC4B4;
-    background-color: #2577C4;
+    color: #073200;
+    background-color: #FEFEF4;
 }
 
 // RESPONSIVE STYLING
