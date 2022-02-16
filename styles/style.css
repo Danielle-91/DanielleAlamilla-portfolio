@@ -457,86 +457,6 @@ header {
   height: 60px;
 }
 
-input[type=checkbox] {
-  display: none;
-}
-
-input:checked + label {
-  background: #c0c0c0;
-}
-
-input:checked + label .fa-sun {
-  -webkit-transform: translateX(-43px) rotate(160deg);
-          transform: translateX(-43px) rotate(160deg);
-  opacity: 0;
-}
-
-input:checked + label .fa-moon {
-  -webkit-transform: translateX(0) rotate(0);
-          transform: translateX(0) rotate(0);
-  opacity: 1;
-}
-
-input:checked + label .ball {
-  -webkit-transform: translateX(40px);
-          transform: translateX(40px);
-  background: white;
-}
-
-label {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 75px;
-  height: 35px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 0 6px;
-  background: #222;
-  border-radius: 50px;
-  cursor: pointer;
-  position: relative;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-label i {
-  font-size: 1rem;
-}
-
-label .fa-sun {
-  color: gold;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  opacity: 1;
-}
-
-label .fa-moon {
-  color: white;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  opacity: 0;
-  -webkit-transform: translateX(43px) rotate(250deg);
-          transform: translateX(43px) rotate(250deg);
-}
-
-label .ball {
-  position: absolute;
-  display: block;
-  width: 25px;
-  height: 25px;
-  top: 5px;
-  left: 5px;
-  background: white;
-  border-radius: 50%;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
 .headerIntro {
   margin-top: 180px;
   margin-left: 50px;
@@ -790,6 +710,10 @@ nav ul li:focus-within {
     width: 300px;
     -o-object-fit: fill;
        object-fit: fill;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: re;
+            flex-direction: re;
   }
 }
 .skillset .wrapper {
