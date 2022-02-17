@@ -1,10 +1,11 @@
-h1, h3, nav ul li{
+h1, nav ul li{
     font-family: 'Permanent Marker', cursive;
     color: #073200;
 }
 
-nav ul li, p, li, h2{
+nav ul li, p, li, h2, h3, span{
     font-family: 'Archivo', sans-serif;
+    color: #073200;
 }
 
 h1{
@@ -22,6 +23,7 @@ h2{
 
 h3{
     font-size: 1.5rem;
+    text-align: center;
 }
 
 
@@ -31,6 +33,10 @@ p, li{
 
 li{
     list-style: none;
+}
+
+span{
+    font-size: 1rem;
 }
 
 button{

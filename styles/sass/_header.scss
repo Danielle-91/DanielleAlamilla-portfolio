@@ -50,9 +50,9 @@ nav ul li{
 
 .fa-angle-double-down{
     color: #FEFEF4;
-    align-self: flex-end;
-    margin-right: 50%;
-    margin-bottom: 40px;
+    position: absolute;
+    z-index: 200;
+    top: 500px;
     font-size: 2.5rem;
     animation: floating 3s ease-in-out infinite;
 }
@@ -65,11 +65,7 @@ nav ul li{
 
 
 .headerPic{
-    position: absolute;
-    top: 0;
-    right: 70px;
-    top: 75px;
-    z-index: 1;
+    // object-fit: fill;
 }
 
 a{
