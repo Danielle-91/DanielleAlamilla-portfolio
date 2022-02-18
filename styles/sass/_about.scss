@@ -6,12 +6,18 @@
     display: flex;
 }
 .abtPic{
-    height: 350px;
+    height: 390px;
+    margin-top: 10px;
+    border-radius: 5px;
 }
 
+.about h2{
+    margin-left: 30px;
+}
 .abtFlex p{
     margin-left: 20px;
     color: #073200;
+    line-height: 30px;
 }
 
 .abtFlex span{
@@ -50,14 +56,9 @@
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
-    header{
-        width: 100%;
-        flex-wrap: wrap;
-        flex-direction: column-reverse;
+    .abtFlex{
+        justify-content: center;
     }
-    nav ul{
-        margin: 0 auto;
-    } 
 }
 
 /*iPhone 12 (so it looks nice on my phone)*/
@@ -65,8 +66,6 @@
 @media (max-width: 390px){
     .abtPic{
         width: 300px;
-        object-fit: fill;
-        flex-direction: re;
     }
 }
 

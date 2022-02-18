@@ -41,7 +41,9 @@ button:hover,
 button:focus,
 button:focus-within{
     color: #073200;
-    background-color: #FEFEF4;
+    background-color: #e5e9dc;
+    box-shadow: 2px 2px 10px rgb(134, 134, 134) inset;
+
 }
 
 // RESPONSIVE STYLING

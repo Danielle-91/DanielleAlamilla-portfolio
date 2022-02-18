@@ -444,8 +444,31 @@ nav ul li {
   margin-top: 60px;
   margin-left: 50px;
   width: 400px;
+  -webkit-animation: fadeInAnimation ease 7s;
+          animation: fadeInAnimation ease 7s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
 }
 
+@-webkit-keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .headerIntro p {
   margin-top: 60px;
   line-height: 27px;
@@ -453,10 +476,10 @@ nav ul li {
 }
 
 .fa-angle-double-down {
-  color: #FEFEF4;
+  color: #073200;
   position: absolute;
   z-index: 200;
-  top: 500px;
+  top: 490px;
   font-size: 2.5rem;
   -webkit-animation: floating 3s ease-in-out infinite;
           animation: floating 3s ease-in-out infinite;
@@ -491,6 +514,12 @@ nav ul li {
             transform: translate(0, 0px);
   }
 }
+.headerPic {
+  width: 50%;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
 a {
   text-decoration: none;
 }
@@ -501,6 +530,10 @@ a {
     height: 500px;
   }
 
+  .headerIntro {
+    text-align: left;
+  }
+
   header i {
     font-size: 2rem;
     margin-bottom: 20px;
@@ -508,61 +541,34 @@ a {
 }
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
-  .headerIntro {
-    margin-left: 30px;
-  }
-
   header i {
-    margin-bottom: 0;
-    margin-left: 60px;
-  }
-
-  nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 100%;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-  }
-
-  nav ul {
-    padding: 0;
-  }
-
-  nav ul li {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-transition: -webkit-transform 0.5s;
-    transition: -webkit-transform 0.5s;
-    transition: transform 0.5s;
-    transition: transform 0.5s, -webkit-transform 0.5s;
-  }
-
-  nav ul li:hover,
-nav ul li:focus,
-nav ul li:focus-within {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
+    visibility: hidden;
   }
 }
 /* Landscape phones and down */
 @media (max-width: 480px) {
   header {
-    height: 600px;
+    height: 400px;
+    display: block;
+    margin: 0;
+  }
+
+  .headTextCard {
+    width: 100%;
+    height: 400px;
   }
 
   .headerIntro {
     text-align: center;
+    margin: 0 auto;
+    padding-top: 60px;
   }
 
   .headerIntro p {
     margin: 0 auto;
   }
 
-  header i {
+  .headerPic, header i {
     visibility: hidden;
   }
 }
@@ -596,12 +602,19 @@ nav ul li:focus-within {
 }
 
 .abtPic {
-  height: 350px;
+  height: 390px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.about h2 {
+  margin-left: 30px;
 }
 
 .abtFlex p {
   margin-left: 20px;
   color: #073200;
+  line-height: 30px;
 }
 
 .abtFlex span {
@@ -640,30 +653,16 @@ nav ul li:focus-within {
 }
 /* Landscape phones and down */
 @media (max-width: 480px) {
-  header {
-    width: 100%;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-  }
-
-  nav ul {
-    margin: 0 auto;
+  .abtFlex {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 /*iPhone 12 (so it looks nice on my phone)*/
 @media (max-width: 390px) {
   .abtPic {
     width: 300px;
-    -o-object-fit: fill;
-       object-fit: fill;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: re;
-            flex-direction: re;
   }
 }
 .skillset .wrapper {
@@ -708,8 +707,8 @@ nav ul li:focus-within {
 }
 
 .currently {
-  -webkit-box-shadow: 2px 2px 10px #868686;
-          box-shadow: 2px 2px 10px #868686;
+  -webkit-box-shadow: 2px 2px 10px #868686 inset;
+          box-shadow: 2px 2px 10px #868686 inset;
   border-radius: 10px;
   width: 500px;
   height: 300px;
@@ -745,6 +744,22 @@ nav ul li:focus-within {
   display: block;
 }
 
+@media (max-width: 940px) {
+  .skillContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .skillset ul {
+    width: 100%;
+  }
+
+  .currently {
+    margin: 0 auto;
+  }
+}
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
   .skillset i {
@@ -752,20 +767,40 @@ nav ul li:focus-within {
   }
 
   .skillset ul {
-    padding-left: 0;
-    margin-left: 0;
+    width: 100%;
   }
 
   .skillset li {
-    width: calc(100% / 4 - 10px);
+    width: calc(100% / 3 - 10px);
     margin: 5px;
-    padding: 5px;
+    padding: 15px;
+  }
+
+  /*iPhone 12 (so it looks nice on my phone)*/
+}
+@media (max-width: 768px) and (max-width: 480px) {
+  .skillset ul {
+    width: 100%;
+    padding: 0;
+  }
+
+  .skillset li {
+    padding: 15px;
+  }
+
+  .currently {
+    width: 100%;
+    padding: 0;
   }
 }
-/*iPhone 12 (so it looks nice on my phone)*/
-@media (max-width: 390px) {
+@media (max-width: 768px) and (max-width: 390px) {
+  .skillset .wrapper {
+    width: 390px;
+  }
+
   .skillset li {
     width: calc(100% / 3 - 10px);
+    padding: 10px;
   }
 }
 .projects .wrapper {
@@ -943,7 +978,9 @@ button:hover,
 button:focus,
 button:focus-within {
   color: #073200;
-  background-color: #FEFEF4;
+  background-color: #e5e9dc;
+  -webkit-box-shadow: 2px 2px 10px #868686 inset;
+          box-shadow: 2px 2px 10px #868686 inset;
 }
 
 /* Portrait tablet and small desktops */

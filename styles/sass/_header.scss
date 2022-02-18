@@ -40,8 +40,20 @@ nav ul li{
     margin-top: 60px;
     margin-left: 50px;
     width: 400px;
+    animation: fadeInAnimation ease 7s;
+    animation-iteration-count: 1;
+    animation-fill-mode: backwards;
 }
 
+// fading in header text
+@keyframes fadeInAnimation{
+    0% {
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 .headerIntro p{
     margin-top: 60px;
     line-height: 27px;
@@ -49,14 +61,15 @@ nav ul li{
 }
 
 .fa-angle-double-down{
-    color: #FEFEF4;
+    color: #073200;
     position: absolute;
     z-index: 200;
-    top: 500px;
+    top: 490px;
     font-size: 2.5rem;
     animation: floating 3s ease-in-out infinite;
 }
 
+// floating arrow
 @keyframes floating {
     0% { transform: translate(0,  0px); }
     50%  { transform: translate(0, 15px); }
@@ -65,8 +78,10 @@ nav ul li{
 
 
 .headerPic{
-    // object-fit: fill;
+    width: 50%;
+    object-fit: fill;
 }
+
 
 a{
     text-decoration: none;
@@ -81,66 +96,54 @@ a{
         height: 500px;
     }
 
-
+    .headerIntro{
+        text-align: left;
+    }
 
     header i{
         font-size: 2rem;
         margin-bottom: 20px;
-    }
-
-    header i{
     }
 }
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
     .headerIntro{
-        margin-left: 30px;
+        // margin-left: 30px;
     }
 
-    header i{
-        margin-bottom: 0;
-        margin-left: 60px;
+    header i {
+        visibility: hidden;
     }
 
-    nav{
-        display: flex;
-        width: 100%;
-        justify-content: flex-start;
-    }
-
-    nav ul{
-        padding: 0;
-    }
     
-    nav ul li{
-        justify-content: center;
-        transition: transform 0.5s;
-
-    }
-
-    nav ul li:hover,
-    nav ul li:focus,
-    nav ul li:focus-within{
-    transform: scale(1.2);
-}
 }
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
     header{
-        height: 600px;
+        height: 400px;
+        display: block;
+        margin: 0;
+    }
+
+    .headTextCard{
+        width: 100%;
+        height: 400px;
+
     }
 
     .headerIntro{
         text-align: center;
+        margin: 0 auto;
+        padding-top: 60px;
     }
 
     .headerIntro p{
         margin: 0 auto;
     }
 
-    header i {
+    .headerPic, header i {
         visibility: hidden;
     }
 }
