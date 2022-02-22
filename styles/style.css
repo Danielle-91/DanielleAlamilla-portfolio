@@ -240,7 +240,7 @@ h1, nav ul li {
   color: #073200;
 }
 
-nav ul li, p, li, h2, h3, span {
+nav ul li, a, p, li, h2, h3, span {
   font-family: "Archivo", sans-serif;
   color: #073200;
 }
@@ -517,7 +517,7 @@ nav ul li {
 .headerPic {
   width: 50%;
   -o-object-fit: fill;
-  object-fit: fill;
+     object-fit: fill;
 }
 
 a {
@@ -837,7 +837,7 @@ a {
   width: 50%;
   height: auto;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 
 .right {
