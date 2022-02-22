@@ -8,11 +8,6 @@
     text-align: center;
 }
 
-.projectContainer{
-    // display: flex;
-
-}
-
 .card{
     display: flex;
     margin-top: 80px;
@@ -44,77 +39,45 @@
 
 /* Portrait tablet and small desktops */
 @media (max-width: 940px) {
-    .projectPics img{
-        width: 650px;
-    }
 
-    .overlay{
-        width: 630px;
-    }
-
-    .flexPic img{
-        width: 250px;
-    }
-
-    .flexText{
-        margin-top: 0;
-    }
 }
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
-    .projectPics{
-        padding: 0;
+    .card{
+        // border: 2px solid red;
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+        margin-bottom: 50px;
+    }
+    .card img{
+        width: 100%;
+    }
+
+    .left img{
+        height: 400px;
+    }
+    .description{
+        width: 100%;
+        margin: 0 auto;
     }
 }
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
-    .projectPics img{
-        width: 400px;
-    }
-
-    .overlay{
-        width: 380px;
-    }
-
-    .flexPic img{
-        display: none;
-    }
-
-    .flexText h3{
+    .description{
+        padding: 20px;
+        margin-bottom: 60px;
         font-size: 0.8rem;
-        margin-top: 0;
-    }
-
-    .flexText p{
-        line-height: 15px;
-        margin-top: 0;
     }
 }
 
 /*iPhone 12 (so it looks nice on my phone)*/
 
 @media (max-width: 390px){
-    .imgContainer img{
-        width: 300px;
-    }
-
-    .overlay{
-        width: 280px;
-    }
-
-    .flexPic img{
-        display: none;
-    }
-    .flexText h3,
-    .flexText p{
-        margin: 0;
-        padding: 0;
-    }
-
-    .flexText p{
-        font-size: 0.4rem;
-        line-height: 10px;
+    .description{
+        margin-bottom: 10px;
+        padding-bottom: 0;
     }
 }
