@@ -4,52 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="color-scheme" content="dark light">
     <title>Danielle the Dev</title>
     <link rel="stylesheet" href="./styles/style.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo&display=swap" rel="stylesheet">
+
     <script src="https://kit.fontawesome.com/dfc0c19384.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
         <a class="skip-main" href="#main">Skip to main content</a>
-        <div class="navBar">
-            <div class="switchContainer">
-                <input id="switch" type="checkbox"/>
-                <label for="switch">
-                    <i class="far fa-moon"></i>
-                    <i class="far fa-sun"></i>
-                    <span class="ball"></span>
-                </label>
-            </div>
-                
-
-            <img src="./assets/dark-mode-logo.png" alt="capital D in centre of square">
-
-            <input type="checkbox" name="burgerBox" id="burgerBox"/>
-            <div class="burgerLines">
-                <span class="line line1"></span>
-                <span class="line line2"></span>
-                <span class="line line3"></span>
-            </div>
-            
-            <div class="menuItems">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skillset">Skillset</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="headTextCard">
+            <div class="headerIntro">
+                <h1>Danielle the Developer</h1>
+                <p>Danielle Alamilla (A-la-ME-yah) is a Front-End Developer and graduate of Juno College's Web Development Bootcamp.</p>
             </div>
-        </div>
+        </div> 
             
-        <div class="headerIntro">
-            <h1>Danielle the Developer</h1>
-            <p>Danielle Alamilla (A-la-ME-yah) is a Front-End Developer and graduate of Juno College's Web Development Bootcamp.</p>
-        </div>
         <i class="fas fa-angle-double-down"></i>
-        <img class="headerPic" src="./assets/bgpic.png" alt="me!">
-        <div class="circle"></div>
+        <img class="headerPic" src="./assets/headerMaybe.JPG" alt="me!">
         
     </header>
 
@@ -58,7 +46,7 @@
             <div class="wrapper">
                 <h2>Hello World</h2>
                 <div class="abtFlex">
-                    <img src="./assets/lfhh.jpg" alt="cartoon of a girl writing at a desk" class="abtPic">
+                    <img src="./assets/portfolioPic.jpg" alt="me smiling in a restaturant" class="abtPic">
                     <p>I am a Front-End Developer based out of York Region. I love creating websites that are accessible, enjoyable, and easy on the eyes. My previous work in Early Childhood Education has helped reinforce my strengths in communication, time management and creativity; skills I strive to bring to all my work. When I'm not sketching out mockups, I like sushi, old school hip hop, slasher movies and trivia. Did you know there's a  <a href="https://www.cbc.ca/news/entertainment/italian-finds-hidden-music-in-leonardo-s-last-supper-1.642120">secret song</a> hidden in the Last Supper? <span>For any website needs or useless knowledge needs, get in touch using the form below, or at:</span>
                     
                     <a href="https://github.com/Danielle-91?tab=repositories"><i class="fab fa-github"></i><span class="sr-only">Github</span></a>
@@ -75,83 +63,83 @@
         <section class="skillset" id="skillset">
             <div class="wrapper">
                 <h2>Skillset</h2>
-                <ul>
-                    <li><i class="fab fa-html5"></i><span>HTML5</span></li>
-                    <li><i class="fab fa-css3-alt"></i><span>CSS3</span></</li>
-                    <li><i class="fas fa-fire-alt"></i><span>Firebase</span></</li>
-                    <li><i class="fab fa-js-square"></i><span>JavaScript</span></</li>
-                    <li><i class="fab fa-sass"></i><span>SCSS</span></</li>
-                    <li><i class="fas fa-universal-access"></i><span>Accessibility</span></</li>
-                    <li><i class="fab fa-react"></i><span>React</span></</li>
-                    <li><i class="fas fa-mobile-alt"></i><span>Responsive Design</span></</li>
-                    <li><i class="fas fa-database"></i><span>RESTful API</span></</li>
-                    <li><i class="fas fa-terminal"></i><span>Command Line</span></</li>
-                    <li><i class="fab fa-git"></i><span>Git</span></</li>
-                    <li><i class="fas fa-hands-helping"></i><span>Pair Programming</span></</li>
-                </ul>
+                <div class="skillContainer">
+                    <ul>
+                        <li><i class="fab fa-html5"></i><span>HTML5</span></li>
+                        <li><i class="fab fa-css3-alt"></i><span>CSS3</span></</li>
+                        <li><i class="fas fa-fire-alt"></i><span>Firebase</span></li>
+                        <li><i class="fab fa-js-square"></i><span>JavaScript</span></li>
+                        <li><i class="fab fa-sass"></i><span>SCSS</span></li>
+                        <li><i class="fas fa-universal-access"></i><span>Accessibility</span></li>
+                        <li><i class="fab fa-react"></i><span>React</span></li>
+                        <li><i class="fas fa-mobile-alt"></i><span>Responsive Design</span></li>
+                        <li><i class="fas fa-database"></i><span>RESTful API</span></li>
+                        <li><i class="fas fa-terminal"></i><span>Command Line</span></li>
+                        <li><i class="fab fa-git"></i><span>Git</span></li>
+                        <li><i class="fas fa-hands-helping"></i><span>Pair Programming</span></li>
+                    </ul>
+                    <div class="currently">
+                        <h3>In progress:</h3>
+                        <i class="fa-solid fa-gem"></i><span>Ruby</span>
+                    </div>
+                </div>
+                    
+                    
             </div>
         </section>
-
         <section class="projects" id="projects">
             <div class="wrapper">
                 <h2>Projects</h2>
-                <p>A section in progress. <span class="hover">Hover</span> to learn more.</p>
+                <!-- <p>An endless section. Look for updates!</p> -->
                 <div class="projectContainer">
 
-                    <div class="card">
-                        <div class="item front">
-                            <img src="./assets/recordplay.png"
-                                alt="Photo of a cassette tape being tossed in the air outside, text below it says 'Record plus play'">
-                        </div>
-
-                        <div class="item back">
+                    <div class="card left">
+                        
+                        <img src="./assets/rp_mockup.jpg"
+                            alt="Photo of a cassette tape being tossed in the air outside, text below itsays 'Record plus play'">
+                        <div class="description">
                             <h3>Record + Play</h3>
-                            
-                            <p>Record + Play is a mixtape-maker created in React using the iTunes API. Type in the name of your favourite artists
-                                and it will return a list of ten of their songs for you to use as your very own mixtape. I'm excited to play around
-                                with this one some more and add to its functionality!</p>
-                                <a href="https://github.com/Danielle-91/Danielle-Alamilla-Project-3">Github</a>
                                 
-                                <a href="https://kind-ardinghelli-c4eb63.netlify.app/">Live Site</a>
+                            <p>Record + Play is a mixtape-maker created in React using the iTunes API.Type in the name of your favourite artists and it will return a list of ten of their songs for you to use as your very own mixtape. I'm excited to play around
+                                with this one some more and add to its functionality!</p>
+                            <a href="https://github.com/Danielle-91/Danielle-Alamilla-Project-3">Github</a>
+                                    
+                            <a href="https://kind-ardinghelli-c4eb63.netlify.app/">Live Site</a>
                         </div>
+                                
                     </div>
 
-                    <div class="card">
-                        <div class="item front">
-                            <img src="./assets/aroundtheworld.png"
-                                alt="Picture of a country's flag with the words 'What flag is this?' above it. Below are 4 multiple choice buttons.">
-                        </div>
+                    <div class="card right">
 
-                        <div class="item back">
+                        <img src="./assets/atw_mockup.jpg"
+                            alt="A country's flag with the words 'What flag is this?' above it. Below are 4 multiple choice buttons.">
+                        <div class="description">
                             <h3>Around the World Flag Quiz</h3>
-                            
+                                
                             <p>Did you know at least one colour from the Olympic rings can be found on the flag of every country in the world? There
                                 are five colours but many, many, many...MANY flags. Kelvin Lee and I created a quiz to test your knowledge on these
-                                flags using vanilla JavaScript and the <a href="https://restcountries.com/">Rest Countries API.</a> Give it a try!
+                                flags using vanilla JavaScript and the <a href="https://restcountries.com">Rest Countries API.</a> Give it a try!
                             </p>
-                            
+                                
                             <a href="https://github.com/TheNoBonesZone/aroundTheWorldQuiz">Github</a>
-                            
                             <a href="https://aroundtheworldwithdk.netlify.app/">Live Site</a>
                         </div>
+                            
+
                     </div>
 
-                    <div class="card">
-                        <div class="item front">
-                            <img src="./assets/captured.png"
-                                alt="A header image of a film camera with website title below. The side of another camera is seen to the right.">
-                        </div>
+                    <div class="card left">
 
-                        <div class="item back">
+                        <img src="./assets/captured_mockup.jpg" alt="Picture of a man holding camera with an article below the picture">
+                        <div class="description">
                             <h3>Captured</h3>
-                            
-                            <p>Captured is a multi-page PSD conversion created from a client brief and design files, made responsive using Flexbox
-                                layout.</p>
-                            
+                                
+                            <p>Captured is a multi-page PSD conversion created from a client brief and design files, made responsive using Flexbox layout.</p>
+                                
                             <a href="https://github.com/Danielle-91/Danielle-Alamilla-Project-1">Github</a>
-                            
                             <a href="https://jovial-liskov-ad8802.netlify.app/">Live Site</a>
                         </div>
+                            
                     </div>
 
                 </div>
@@ -160,7 +148,7 @@
 
         <section class="contact" id="contact">
             <div class="wrapper">
-                <h2>Hit Me Up!</h2>
+                <h2>Contact</h2>
                 <p>If you have any questions, want to chat or send me music/movie/restaturant recommendations (all very welcome) leave your email and message and I'll get back to you as soon as possible! For a direct link, email me at danielle.alamilla@gmail.com.</p>
                 <form action="https://formspree.io/f/xwkykvky" method="POST">
                     <label class="sr-only">
@@ -179,7 +167,7 @@
     </main>
 
     <footer>
-        <p>Created by Danielle Alamilla</p>
+        <p>Designed and developed by Danielle Alamilla © 2021</p>
     </footer>
     <script src="./dark-mode.js"></script>
 </body>

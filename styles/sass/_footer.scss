@@ -1,15 +1,10 @@
 footer{
-    background: #f3a893;
+    background-color: #073200;
     height: 57px;
 }
 
-footer p, footer a{
+footer p{
+    color: #FEFEF4;
     padding-top: 15px;
     text-align: center;
-}
-
-footer a:hover,
-footer a:focus,
-footer a:focus-within{
-    color: rgb(250, 100, 0);
 }

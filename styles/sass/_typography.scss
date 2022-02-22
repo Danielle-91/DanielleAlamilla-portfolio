@@ -1,11 +1,11 @@
-h1, h2, h3, nav ul li, .menuItems li a, button{
-    font-family: 'Roboto Condensed', sans-serif;
-    font-weight: 700;
-    color: let(--color);
+h1, nav ul li{
+    font-family: 'Permanent Marker', cursive;
+    color: #073200;
 }
 
-a:visited{
-    color: let(--color);
+nav ul li, p, li, h2, h3, span{
+    font-family: 'Archivo', sans-serif;
+    color: #073200;
 }
 
 h1{
@@ -13,7 +13,7 @@ h1{
 }
 
 nav ul li a{
-    font-size: 1rem;
+    font-size: 1.3rem;
 }
 
 h2{
@@ -23,18 +23,20 @@ h2{
 
 h3{
     font-size: 1.5rem;
+    text-align: center;
 }
 
 
 p, li{
-    font-family: 'Roboto Condensed', sans-serif;
-    font-weight: 400;
     font-size: 1rem;
-    color: let(color);
 }
 
 li{
     list-style: none;
+}
+
+span{
+    font-size: 1rem;
 }
 
 button{
