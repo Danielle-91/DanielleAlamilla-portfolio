@@ -517,7 +517,7 @@ nav ul li {
 .headerPic {
   width: 50%;
   -o-object-fit: fill;
-     object-fit: fill;
+  object-fit: fill;
 }
 
 a {
@@ -837,7 +837,7 @@ a {
   width: 50%;
   height: auto;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .right {
