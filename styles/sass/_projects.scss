@@ -37,11 +37,6 @@
 
 // RESPONSIVE STYLING
 
-/* Portrait tablet and small desktops */
-@media (max-width: 940px) {
-
-}
-
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
     .card{
@@ -49,7 +44,7 @@
         flex-direction: column;
         height: auto;
         padding: 10px;
-        margin-bottom: 50px;
+        margin-bottom: 20%;
     }
     .card img{
         width: 100%;
@@ -68,7 +63,7 @@
 @media (max-width: 480px) {
     .description{
         padding: 20px;
-        margin-bottom: 60px;
+        // margin-bottom: 60px;
         font-size: 0.8rem;
     }
 }
@@ -76,8 +71,12 @@
 /*iPhone 12 (so it looks nice on my phone)*/
 
 @media (max-width: 390px){
+    .card{
+
+    }
+
     .description{
-        margin-bottom: 10px;
+        // margin-bottom: 10px;
         padding-bottom: 0;
     }
 }

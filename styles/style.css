@@ -854,7 +854,6 @@ a {
   text-align: center;
 }
 
-/* Portrait tablet and small desktops */
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
   .card {
@@ -864,7 +863,7 @@ a {
             flex-direction: column;
     height: auto;
     padding: 10px;
-    margin-bottom: 50px;
+    margin-bottom: 20%;
   }
 
   .card img {
@@ -884,14 +883,12 @@ a {
 @media (max-width: 480px) {
   .description {
     padding: 20px;
-    margin-bottom: 60px;
     font-size: 0.8rem;
   }
 }
 /*iPhone 12 (so it looks nice on my phone)*/
 @media (max-width: 390px) {
   .description {
-    margin-bottom: 10px;
     padding-bottom: 0;
   }
 }
