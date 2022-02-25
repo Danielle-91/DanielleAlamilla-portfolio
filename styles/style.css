@@ -662,7 +662,7 @@ a {
 /*iPhone 12 (so it looks nice on my phone)*/
 @media (max-width: 390px) {
   .abtPic {
-    width: 90%;
+    width: 60%;
   }
 }
 .skillset .wrapper {
