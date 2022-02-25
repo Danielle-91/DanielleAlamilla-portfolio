@@ -891,6 +891,10 @@ a {
   .description {
     padding-bottom: 0;
   }
+
+  .card:last-of-type {
+    margin-bottom: 30px;
+  }
 }
 .contact .wrapper {
   border-radius: 10px;

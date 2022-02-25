@@ -63,7 +63,6 @@
 @media (max-width: 480px) {
     .description{
         padding: 20px;
-        // margin-bottom: 60px;
         font-size: 0.8rem;
     }
 }
@@ -71,12 +70,12 @@
 /*iPhone 12 (so it looks nice on my phone)*/
 
 @media (max-width: 390px){
-    .card{
-
-    }
 
     .description{
-        // margin-bottom: 10px;
         padding-bottom: 0;
+    }
+
+    .card:last-of-type{
+        margin-bottom: 30px;
     }
 }
