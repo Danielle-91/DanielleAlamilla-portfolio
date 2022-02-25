@@ -893,7 +893,7 @@ a {
   }
 
   .card:last-of-type {
-    margin-bottom: 30px;
+    margin-bottom: 0;
   }
 }
 .contact .wrapper {
