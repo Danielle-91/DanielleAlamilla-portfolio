@@ -1179,7 +1179,6 @@ header {
   }
   #carousel-wrapper #menu {
     height: 80vh;
-    border: 2px solid red;
   }
   #carousel-wrapper #menu #current-project {
     left: 87px;
@@ -1191,8 +1190,9 @@ header {
         justify-content: space-around;
   }
   #carousel-wrapper #menu #current-project #next {
-    right: 478px;
+    right: 320px;
     top: 560px;
+    width: 100%;
   }
   #carousel-wrapper #project-image {
     top: 2881px;

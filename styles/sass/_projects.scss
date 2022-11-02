@@ -269,7 +269,6 @@
 
         #menu {
             height: 80vh;
-            border: 2px solid red;
 
             #current-project {
                 left: 87px;
@@ -282,8 +281,9 @@
                 }
 
                 #next {
-                    right: 478px;
+                    right: 320px;
                     top: 560px;
+                    width: 100%;
                 }
             }
 
