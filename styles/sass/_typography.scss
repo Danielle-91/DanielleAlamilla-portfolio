@@ -1,101 +1,137 @@
-h1, nav ul li{
-    font-family: 'Permanent Marker', cursive;
-    color: #073200;
+h1 {
+    font-size: 6rem;
+    letter-spacing: 1.5px;
 }
 
-nav ul li, p, li, h2, h3, span{
+h1,
+.menu nav ul li a {
+    font-family: 'Yellowtail', cursive;
+}
+
+h1,
+h2,
+.menu nav ul li a,
+.fa-chevron-down,
+footer p {
+    // Neon effect (code tips taken from https: //css-tricks.com/how-to-create-neon-text-with-css/)
+    color: rgb(239, 229, 229);
+    text-shadow:
+        0 0 2px #fff,
+        0 0 3px #000,
+        0 0 15px #fff,
+        0 0 18px #ffabaa,
+        0 0 69px #ffabaa,
+        0 0 39px #ffabaa,
+        0 0 87px #ffabaa,
+        0 0 69px #ffabaa;
+}
+
+a,
+p,
+li,
+h2,
+h3,
+span {
     font-family: 'Archivo', sans-serif;
-    color: #073200;
+    color: rgb(239, 229, 229);
 }
 
-h1{
-    font-size: 3.3rem;
+.menu nav ul li a {
+    font-size: 1.7rem;
+    letter-spacing: 1px;
 }
 
-nav ul li a{
-    font-size: 1.3rem;
-}
-
-h2{
+h2 {
     font-size: 2.5rem;
     text-align: center;
 }
 
-h3{
+h3 {
     font-size: 1.5rem;
     text-align: center;
 }
 
 
-p, li{
+p,
+li {
     font-size: 1rem;
 }
 
-li{
+li {
     list-style: none;
 }
 
-span{
+span {
     font-size: 1rem;
 }
 
-button{
+button {
     font-size: 1.3rem;
 }
 
+#about h2 {
+    margin-bottom: 30px;
+}
+
+.fa-circle-up {
+    font-size: 1.7rem;
+}
 
 // RESPONSIVE STYLING
 
 /* Portrait tablet and small desktops */
 @media (max-width: 940px) {
-    h1{
-        font-size: 2rem;
-    }
-    nav{
-        font-size: 0.7rem;
-    }
-    header p{
-        font-size: 0.9rem;
-        width: 250px;
+    h1 {
+        font-size: 3.5rem;
     }
 
-    h3{
-        font-size: 1.2rem;
+    p {
+        font-size: 0.9rem;
     }
-    .flexText p{
-        font-size: 0.7rem;
+
+    h3 {
+        font-size: 1.2rem;
     }
 }
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
-    nav ul li a{
+    nav ul li a {
         font-size: 0.9rem;
     }
 }
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
-    .skillset li{
+    h1 {
+        font-size: 3rem;
+    }
+
+    p {
         font-size: 0.8rem;
+    }
+
+    .skillset li {
+        font-size: 0.7rem;
     }
 }
 
 /*iPhone 12 (so it looks nice on my phone)*/
 
-@media (max-width: 390px){
-    h1{
-        font-size: 1.5rem;
+@media (max-width: 390px) {
+    h1 {
+        font-size: 2.5rem;
     }
 
-    p{
-        font-size: 0.8rem;
-    }
+    // p {
+    //     font-size: 0.8rem;
+    // }
 
-    h3{
+    h3 {
         font-size: 0.9rem;
     }
-    .flexText p{
-        font-size: 0.7rem;
+
+    .skillset span {
+        font-size: 0.9rem;
     }
 }
