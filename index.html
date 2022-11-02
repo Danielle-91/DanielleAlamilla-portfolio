@@ -10,7 +10,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,15 +22,22 @@
 <body>
     <header>
         <a class="skip-main" href="#main">Skip to main content</a>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skillset">Skillset</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <input type="checkbox" class="toggle">
+        <div class="hamburger">
+            <div></div>
+        </div>
+        <div class="menu">
+            <nav>
+                <ul tabindex="0">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skillset">Skillset</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
         <div class="headTextCard">
             <div class="headerIntro">
                 <h1>Danielle the Developer</h1>
@@ -40,8 +47,6 @@
         </div>
 
         <i class="fas fa-angle-double-down"></i>
-        <img class="headerPic" src="./assets/headerMaybe.JPG" alt="me!">
-
     </header>
 
     <main id="main">
@@ -70,6 +75,8 @@
                     </p>
                 </div>
 
+                <a href="#" class="top"><i class="fa-solid fa-circle-up"></i> <span class="sr-only">Back to top</span>
+                </a>
             </div>
         </section>
 
@@ -78,88 +85,38 @@
                 <h2>Skillset</h2>
                 <div class="skillContainer">
                     <ul>
-                        <li><i class="fab fa-html5"></i><span>HTML5</span></li>
-                        <li><i class="fab fa-css3-alt"></i><span>CSS3</span></< /li>
-                        <li><i class="fas fa-fire-alt"></i><span>Firebase</span></li>
-                        <li><i class="fab fa-js-square"></i><span>JavaScript</span></li>
-                        <li><i class="fab fa-sass"></i><span>SCSS</span></li>
-                        <li><i class="fas fa-universal-access"></i><span>Accessibility</span></li>
-                        <li><i class="fab fa-react"></i><span>React</span></li>
-                        <li><i class="fas fa-mobile-alt"></i><span>Responsive Design</span></li>
-                        <li><i class="fas fa-database"></i><span>RESTful API</span></li>
-                        <li><i class="fas fa-terminal"></i><span>Command Line</span></li>
-                        <li><i class="fab fa-git"></i><span>Git</span></li>
-                        <li><i class="fas fa-hands-helping"></i><span>Pair Programming</span></li>
+                        <li tabindex="0"> <i class="fab fa-html5"></i> <span>HTML5</span> </li>
+                        <li tabindex="0"> <i class="fab fa-css3-alt"></i> <span>CSS3</span> </li>
+                        <li tabindex="0"> <i class="fab fa-sass"></i> <span>SCSS</span> </li>
+                        <li tabindex="0"> <i class="fab fa-js-square"></i> <span>JavaScript</span> </li>
+                        <li tabindex="0"> <i class="fab fa-react"></i> <span>React</span> </li>
+                        <li tabindex="0"> <i class="fas fa-fire-alt"></i> <span>Firebase</span> </li>
+                        <li tabindex="0"> <i class="fa-solid fa-cloud"></i> <span>RESTful API</span> </li>
+                        <li tabindex="0"> <i class="fas fa-universal-access"></i> <span>Accessibility</span> </li>
+                        <li tabindex="0"> <i class="fas fa-mobile-alt"></i> <span>Responsive Design</span> </li>
+                        <li tabindex="0"> <i class="fas fa-terminal"></i> <span>Command Line</span> </li>
+                        <li tabindex="0"> <i class="fab fa-git"></i> <span>Git</span> </li>
+                        <li tabindex="0"> <i class="fas fa-hands-helping"></i> <span>Pair Program</span> </li>
                     </ul>
-                    <div class="currently">
-                        <h3>In progress:</h3>
-                        <i class="fa-solid fa-gem"></i><span>Ruby</span>
-                    </div>
                 </div>
-
 
             </div>
         </section>
+
         <section class="projects" id="projects">
-            <div class="wrapper">
-                <h2>Projects</h2>
-                <div class="projectContainer">
+            <h2>Projects</h2>
 
-                    <div class="card left">
+            <div id="carousel-wrapper">
 
-                        <img src="./assets/rp_mockup.jpg"
-                            alt="Photo of a cassette tape being tossed in the air outside, text below itsays 'Record plus play'">
-                        <div class="description">
-                            <h3>Record + Play</h3>
+                <div id="menu">
 
-                            <p>Record + Play is a mixtape-maker created in React using the iTunes API.Type in the name
-                                of your favourite artists and it will return a list of ten of their songs for you to use
-                                as your very own mixtape. I'm excited to play around
-                                with this one some more and add to its functionality!</p>
-                            <a href="https://github.com/Danielle-91/Danielle-Alamilla-Project-3">Github</a>
-
-                            <a href="https://kind-ardinghelli-c4eb63.netlify.app/">Live Site</a>
-                        </div>
-
+                    <div id="current-project">
+                        <span id="current-project-text1" data-previous-text="" data-next-text=""></span>
+                        <span id="current-project-text2" data-previous-text="" data-next-text=""></span>
+                        <button id="next"><i class="fa-solid fa-chevron-down"></i></button>
                     </div>
 
-                    <div class="card right">
-
-                        <img src="./assets/atw_mockup.jpg"
-                            alt="A country's flag with the words 'What flag is this?' above it. Below are 4 multiple choice buttons.">
-                        <div class="description">
-                            <h3>Around the World Flag Quiz</h3>
-
-                            <p>Did you know at least one colour from the Olympic rings can be found on the flag of every
-                                country in the world? There
-                                are five colours but many, many, many...MANY flags. Kelvin Lee and I created a quiz to
-                                test your knowledge on these
-                                flags using vanilla JavaScript and the <a href="https://restcountries.com">Rest
-                                    Countries API.</a> Give it a try!
-                            </p>
-
-                            <a href="https://github.com/TheNoBonesZone/aroundTheWorldQuiz">Github</a>
-                            <a href="https://aroundtheworldwithdk.netlify.app/">Live Site</a>
-                        </div>
-
-
-                    </div>
-
-                    <div class="card left">
-
-                        <img src="./assets/captured_mockup.jpg"
-                            alt="Picture of a man holding camera with an article below the picture">
-                        <div class="description">
-                            <h3>Captured</h3>
-
-                            <p>Captured is a multi-page PSD conversion created from a client brief and design files,
-                                made responsive using Flexbox layout.</p>
-
-                            <a href="https://github.com/Danielle-91/Danielle-Alamilla-Project-1">Github</a>
-                            <a href="https://jovial-liskov-ad8802.netlify.app/">Live Site</a>
-                        </div>
-
-                    </div>
+                    <div id="project-image"></div>
 
                 </div>
             </div>
@@ -169,17 +126,16 @@
             <div class="wrapper">
                 <h2>Contact</h2>
                 <p>If you have any questions, want to chat or send me music/movie/restaturant recommendations (all very
-                    welcome), email me directly at danielle.alamilla@gmail.com.</p>
-
-
+                    welcome), email me directly at <span tabindex="0">danielle.alamilla@gmail.com</span></p>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>Designed and developed by Danielle Alamilla © 2021</p>
+        <p>Danielle Alamilla © 2021</p>
     </footer>
-    <script src="./dark-mode.js"></script>
+
+    <script src="projectCarousel.js"></script>
 </body>
 
 </html>
