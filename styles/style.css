@@ -1178,10 +1178,12 @@ header {
     width: 100%;
   }
   #carousel-wrapper #menu {
-    height: 100vh;
+    height: 80vh;
+    border: 2px solid red;
   }
   #carousel-wrapper #menu #current-project {
-    left: 100px;
+    left: 87px;
+    top: 30px;
   }
   #carousel-wrapper #menu #current-project #current-project-text2 {
     padding-top: 20px;
@@ -1190,9 +1192,10 @@ header {
   }
   #carousel-wrapper #menu #current-project #next {
     right: 478px;
+    top: 560px;
   }
   #carousel-wrapper #project-image {
-    top: 2525px;
+    top: 2881px;
     right: 210px;
   }
 }

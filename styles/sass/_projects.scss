@@ -268,10 +268,12 @@
         width: 100%;
 
         #menu {
-            height: 100vh;
+            height: 80vh;
+            border: 2px solid red;
 
             #current-project {
-                left: 100px;
+                left: 87px;
+                top: 30px;
 
                 #current-project-text2 {
                     padding-top: 20px;
@@ -281,13 +283,14 @@
 
                 #next {
                     right: 478px;
+                    top: 560px;
                 }
             }
 
         }
 
         #project-image {
-            top: 2525px;
+            top: 2881px;
             right: 210px;
         }
     }
