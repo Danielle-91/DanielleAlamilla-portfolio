@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <title>Danielle the Dev</title>
     <link rel="stylesheet" href="./styles/style.css">
 
@@ -17,6 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Archivo&display=swap" rel="stylesheet">
 
     <script src="https://kit.fontawesome.com/dfc0c19384.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -41,7 +43,8 @@
         <div class="headTextCard">
             <div class="headerIntro">
                 <h1>Danielle the Developer</h1>
-                <p>Danielle Alamilla (A-la-ME-yah) is a Front-End Developer and graduate of Juno College's Web
+                <p>Danielle Alamilla (A-la-ME-yah) is a Front-End Developer and graduate of Juno
+                    College's Web
                     Development Bootcamp.</p>
             </div>
         </div>
@@ -104,9 +107,75 @@
         </section>
 
         <section class="projects" id="projects">
+
             <h2>Projects</h2>
 
-            <div id="carousel-wrapper">
+            <div class="carousel">
+
+                <div class="carouselNav">
+
+                    <span id="moveLeft" class="carouselArrow">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </span>
+
+                    <span id="moveRight" class="carouselArrow">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+
+                </div>
+
+                <div class="carouselItem carouselItem1">
+                    <div class="carouselItemImg"></div>
+                    <div class="carouselItemInfo">
+                        <div class="carouselItemContainer">
+                            <h2 class="carouselItemTitle">Captured</h2>
+                            <h3 class="carouselItemSubtitle">HTML | SCSS | Flexbox</h3>
+                            <p class="carouselItemDescription">Captured is a multi-page PSD conversion created from a
+                                client brief and design files, made responsive using Flexbox layout.</p>
+                            <a href="https://github.com/Danielle-91/Danielle-Alamilla-Project-1"
+                                class="carouselItemBtn">Github</a>
+                            <a href="https://jovial-liskov-ad8802.netlify.app/" class="carouselItemBtn">Live Site</a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carouselItem carouselItem2">
+                    <div class="carouselItemImg"></div>
+                    <div class="carouselItemInfo">
+                        <div class="carouselItemContainer">
+                            <h2 class="carouselItemTitle">Around the World</h2>
+                            <h3 class="carouselItemSubtitle">JavaScript | CSS | API | Pair Programming</h3>
+                            <p class="carouselItemDescription">Kelvin Lee and I created the Around the World quiz to
+                                test your knowledge on flags of the world using vanilla JavaScript
+                                and the Rest Countries API. Give it a try!</p>
+                            <a href="https://github.com/TheNoBonesZone/aroundTheWorldQuiz"
+                                class="carouselItemBtn">Github</a>
+                            <a href="https://aroundtheworldwithdk.netlify.app/" class="carouselItemBtn">Live Site</a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carouselItem carouselItem3">
+                    <div class="carouselItemImg"></div>
+                    <div class="carouselItemInfo">
+                        <div class="carouselItemContainer">
+                            <h2 class="carouselItemTitle">Record + Play</h2>
+                            <h3 class="carouselItemSubtitle">React | API | CSS</h3>
+                            <p class="carouselItemDescription">Record + Play is a mixtape - maker created in React using
+                                the iTunes API.Type in the name of your favourite artists and
+                                it will return a list of ten of their songs for you to use as your very own mixtape.</p>
+                            <a href="https://github.com/Danielle-91/Danielle-Alamilla-Project-3"
+                                class="carouselItemBtn">Github</a>
+                            <a href="https://kind-ardinghelli-c4eb63.netlify.app/" class="carouselItemBtn">Live Site</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div id="carousel-wrapper">
 
                 <div id="menu">
 
@@ -119,7 +188,7 @@
                     <div id="project-image"></div>
 
                 </div>
-            </div>
+            </div> -->
         </section>
 
         <section class="contact" id="contact">
@@ -135,7 +204,47 @@
         <p>Danielle Alamilla © 2021</p>
     </footer>
 
-    <script src="projectCarousel.js"></script>
+    <script>
+        $(function () {
+            $('.carouselItem').eq(0).addClass('active');
+            let total = $('.carouselItem').length;
+            let current = 0;
+            $('#moveRight').on('click', function () {
+                let next = current;
+                current = current + 1;
+                setSlide(next, current)
+            });
+
+            $('#moveLeft').on('click', function () {
+                let prev = current;
+                current = current - 1;
+                setSlide(prev, current);
+            });
+            function setSlide(prev, next) {
+                let slide = current;
+                if (next > total - 1) {
+                    slide = 0;
+                    current = 0;
+                }
+                if (next < 0) {
+                    slide = total - 1;
+                    current = total - 1;
+                }
+                $('.carouselItem').eq(prev).removeClass('active');
+                $('.carouselItem').eq(slide).addClass('active');
+                setTimeout(function () {
+
+                }, 800);
+
+
+
+                console.log('current ' + current);
+                console.log('prev ' + prev);
+            }
+
+        });
+    </script>
+    <!-- <script src="projectCarousel.js"></script> -->
 </body>
 
 </html>

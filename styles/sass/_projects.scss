@@ -1,298 +1,503 @@
-#carousel-wrapper {
-    width: auto;
-    height: auto;
+.projects {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-    overflow: hidden;
+    align-items: center;
 
-    #menu {
-        margin: 30px;
-        height: 380px;
-        width: 80%;
-        overflow: hidden;
-        line-height: 1;
+    .carousel {
+        max-width: 900px;
+        max-height: 550px;
+        width: 900px;
+        height: 550px;
         display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        vertical-align: middle;
-        transition: all 0.6s ease-in-out;
+        overflow: hidden;
+        position: relative;
 
-        #current-project {
-            position: relative;
+        .carouselItem {
+            visibility: visible;
+            display: flex;
             width: 100%;
             height: 100%;
-            transform: translate(-25%, 0%);
-            display: flex;
-            flex-direction: column;
             align-items: center;
-            justify-content: center;
-            overflow: hidden;
+            justify-content: flex-end;
+            position: absolute;
+            background: #fff;
+            flex-shrink: 0;
+            z-index: 0;
+            transition: 0.6s all linear;
 
-            #current-project-text1 {
-                font-size: 1rem;
-                line-height: 1.4rem;
-                width: 350px;
-                height: 300px;
+            .carouselItemImg {
+                width: 60%;
+                height: 100%;
+                order: 2;
+                align-self: flex-end;
+                flex-basis: 60%;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: relative;
+                z-index: 3;
+                transform: translateX(100%);
+                transition: 0.6s all ease-in-out;
+
+
+            }
+
+
+
+            .carouselItemInfo {
+                height: 100%;
                 display: flex;
                 flex-direction: column;
-                align-items: center;
                 justify-content: center;
+                order: 1;
+                left: 0;
+                margin: auto;
+                padding: 0 40px;
+                width: 40%;
 
-                &::before {
-                    content: attr(data-next-text);
-                    position: absolute;
-                    transform: translate(0%, 380px);
-                    width: 100%;
-                    height: 200px;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: flex-start;
+
+
+                .carouselItemTitle {
+                    margin: 15px 0 0 0;
+                    font-size: 2.2rem;
+                    line-height: 45px;
+                    letter-spacing: 3px;
+                    transform: translateY(25%);
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: 0.6s all ease-in-out;
                 }
+
+                .carouselItemSubtitle {
+                    letter-spacing: 3px;
+                    font-size: 0.5rem;
+                    margin: 0;
+                    transform: translateY(25%);
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: 0.4s all ease-in-out;
+                }
+
+                .carouselItemDescription {
+                    transform: translateY(25%);
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: 0.6s all ease-in-out;
+                    margin-top: 35px;
+                    margin-bottom: 35px;
+                    font-size: 13px;
+                    line-height: 22px;
+                }
+
+
             }
 
-            #current-project-text2 {
-                text-align: left;
-                font-size: 1rem;
-                width: 300px;
-                height: 40px;
-                display: flex;
-                flex-direction: row;
-                align-items: flex-start;
-                justify-content: space-evenly;
-                transition: all 1s;
 
-                &::before {
-                    position: absolute;
-                    transform: translate(0%, 380px);
-                    width: 100%;
-                    height: 40px;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: flex-start;
-                    justify-content: flex-end;
-                }
-
-                :hover {
-                    transform: scale(1.1);
-                    color: rgb(239, 229, 229);
-                    text-shadow:
-                        0 0 2px #fff,
-                        0 0 3px #000,
-                        0 0 15px #fff,
-                        0 0 18px #ffabaa,
-                        0 0 69px #ffabaa,
-                        0 0 39px #ffabaa,
-                        0 0 87px #ffabaa,
-                        0 0 69px #ffabaa;
-                }
-
-            }
         }
 
-        #next {
-            background: rgb(12, 12, 12);
-            border-radius: 5px;
-            width: 1.5rem;
-            height: 1.5rem;
-            border: none;
-            display: block;
-            cursor: pointer;
+
+
+        .carouselItemBtn {
+            width: 35%;
+            letter-spacing: 1px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            margin: 0;
+            transform: translateY(25%);
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.6s all ease-in-out;
+        }
+
+        .carouselNav {
+            border: 2px solid blue;
             position: absolute;
-            bottom: 250px;
-            right: 590px;
-            transform: translate(310px, 50px);
-
-            .fa-chevron-down {
-                font-size: 2.8rem;
-            }
+            right: 0;
+            bottom: 0;
+            z-index: 2;
         }
 
-    }
-
-    #project-image {
-        height: 350px;
-        width: 400px;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        z-index: 101;
-        position: absolute;
-        right: 300px;
-        transform: translate(140px, 0);
-    }
-
-    &.anim-next {
-        pointer-events: none;
-
-        #current-project-text1 {
-            animation: next-text 0.65s 0.085s;
+        .carouselIcon {
+            display: inline-block;
+            vertical-align: middle;
+            width: 16px;
+            fill: #5d5d5d;
         }
 
-        #current-project-text2 {
-            animation: next-text 0.65s 0.085s;
+        .carouselArrow {
+            cursor: pointer;
+            display: inline-block;
+            padding: 11px 15px;
+            position: relative;
         }
 
-        #next {
-            animation: next-bottom-arrow 0.65s 0.085s;
+        .carouselArrow:nth-child(1):after {
+            content: '';
+            right: -3px;
+            position: absolute;
+            width: 1px;
+            background-color: #b0b0b0;
+            height: 14px;
+            top: 50%;
+            margin-top: -7px;
         }
 
-        #project-image {
-            animation: next-image 0.65s 0.085s;
-        }
-    }
-}
-
-@keyframes next-text {
-
-    50%,
-    55% {
-        transform: translate(0%, -390px);
-    }
-
-    to {
-        transform: translate(0%, -380px);
-    }
-}
-
-@keyframes next-image {
-    0% {
-        transform: translate(140px, 0) scale(1);
-        opacity: 1;
-    }
-
-    70% {
-        transform: translate(140px, 0) scale(1.1);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translate(140px, 0) scale(1);
-        opacity: 1;
-    }
-}
-
-// RESPONSIVE STYLING
-
-/* Landscape phone to portrait tablet */
-@media (max-width: 940px) {
-    #carousel-wrapper {
-        justify-content: space-between;
-
-        #menu {
-            #next {
-                right: 450px;
-            }
+        .active {
+            z-index: 1;
+            display: flex;
+            visibility: visible;
         }
 
-        #project-image {
-            height: 300px;
-            width: 350px;
-            right: 200px;
+        .active .carouselItemContainer .carouselItemSubtitle,
+        .active .carouselItemContainer .carouselItemTitle,
+        .active .carouselItemContainer .carouselItemDescription,
+        .active .carouselItemContainer .carouselItemBtn {
+            transform: translateY(0);
+            opacity: 1;
+            transition: 0.6s all ease-in-out;
+            visibility: visible;
+        }
+
+        .active .carouselItemImg {
+            transition: 0.6s all ease-in-out;
+            transform: translateX(0);
         }
     }
 }
 
-@media (max-width: 768px) {
-    #carousel-wrapper {
-        #menu {
-            #current-project {
-                #current-project-text1 {
-                    font-size: 0.9rem;
-                    width: 280px;
-                }
-            }
-        }
+.carouselItem1 {
+    border: 2px solid blue;
 
-        #next {
-            width: 1rem;
-        }
+    div.carouselImg {
+        background-image: url('../assets/captured_mockup.jpg');
+        border: 2px solid red;
 
-        #project-image {
-            height: 250px;
-            width: 300px;
-        }
-    }
-
-}
-
-/* Landscape phones and down */
-@media (max-width: 480px) {
-    #carousel-wrapper {
-        width: 100%;
-
-        #menu {
-            height: 100vh;
-
-            #current-project {
-                height: 100vh;
-                left: 130px;
-                bottom: 0;
-
-                #current-project-text1 {
-                    justify-content: flex-end;
-                    font-size: 0.8rem;
-                }
-
-                #current-project-text2 {
-                    padding-top: 20px;
-                    justify-content: space-between;
-
-                }
-            }
-
-            #next {
-                top: 395px;
-                right: 528px;
-            }
-        }
-
-
-
-        #project-image {
-            height: 200px;
-            width: 250px;
-            right: 255px;
-            top: 2460px;
-        }
     }
 }
 
-/*iPhone 12 (so it looks nice on my phone)*/
-
-@media (max-width: 390px) {
-    #carousel-wrapper {
-        width: 100%;
-
-        #menu {
-            height: 80vh;
-
-            #current-project {
-                left: 87px;
-                top: 30px;
-
-                #current-project-text2 {
-                    padding-top: 20px;
-                    justify-content: space-around;
-
-                }
-
-                #next {
-                    right: 320px;
-                    top: 560px;
-                    width: 100%;
-                }
-            }
-
-        }
-
-        #project-image {
-            top: 2881px;
-            right: 210px;
-        }
-    }
-
+.carouselItem2 {
+    background-image: url('../assets/atw_mockup.jpg');
+    border: 2px solid pink;
 }
+
+.carouselItem3 {
+    background-image: url('../assets/rp_mockup.jpg');
+    border: 2px solid green;
+}
+
+
+
+// .projects {
+//     height: 100vh;
+// }
+
+// #carousel-wrapper {
+//     border: 2px solid red;
+//     max-width: 1800px;
+//     width: 60%;
+//     height: auto;
+//     margin: 0 auto;
+//     display: flex;
+//     flex-direction: row;
+//     align-items: center;
+//     justify-content: center;
+//     overflow: hidden;
+//     position: absolute;
+//     left: 0;
+//     right: 0;
+
+//     #menu {
+//         border: 2px solid white;
+//         margin: 30px;
+//         height: auto;
+//         width: 100%;
+//         overflow: hidden;
+//         line-height: 1;
+//         display: flex;
+//         flex-direction: row;
+//         align-items: center;
+//         justify-content: space-between;
+//         vertical-align: middle;
+//         transition: all 0.6s ease-in-out;
+
+//         #current-project {
+//             position: relative;
+//             width: 100%;
+//             height: 100%;
+//             transform: translate(-25%, 0%);
+//             display: flex;
+//             flex-direction: column;
+//             align-items: center;
+//             justify-content: center;
+//             overflow: hidden;
+
+//             #current-project-text1 {
+//                 font-size: 1rem;
+//                 line-height: 1.4rem;
+//                 width: 350px;
+//                 height: 300px;
+//                 display: flex;
+//                 flex-direction: column;
+//                 align-items: center;
+//                 justify-content: center;
+
+//                 &::before {
+//                     content: attr(data-next-text);
+//                     position: absolute;
+//                     transform: translate(0%, 380px);
+//                     width: 100%;
+//                     height: 200px;
+//                     display: flex;
+//                     flex-direction: column;
+//                     align-items: center;
+//                     justify-content: flex-start;
+//                 }
+//             }
+
+//             #current-project-text2 {
+//                 text-align: left;
+//                 font-size: 1rem;
+//                 width: 300px;
+//                 height: 40px;
+//                 display: flex;
+//                 flex-direction: row;
+//                 align-items: flex-start;
+//                 justify-content: space-evenly;
+//                 transition: all 1s;
+
+//                 &::before {
+//                     position: absolute;
+//                     transform: translate(0%, 380px);
+//                     width: 100%;
+//                     height: 40px;
+//                     display: flex;
+//                     flex-direction: column;
+//                     align-items: flex-start;
+//                     justify-content: flex-end;
+//                 }
+
+//                 :hover {
+//                     transform: scale(1.1);
+//                     color: rgb(239, 229, 229);
+//                     text-shadow:
+//                         0 0 2px #fff,
+//                         0 0 3px #000,
+//                         0 0 15px #fff,
+//                         0 0 18px #ffabaa,
+//                         0 0 69px #ffabaa,
+//                         0 0 39px #ffabaa,
+//                         0 0 87px #ffabaa,
+//                         0 0 69px #ffabaa;
+//                 }
+
+//             }
+//         }
+
+//         #next {
+//             background: rgb(12, 12, 12);
+//             border-radius: 5px;
+//             width: 1.5rem;
+//             height: 1.5rem;
+//             border: none;
+//             display: block;
+//             cursor: pointer;
+//             position: absolute;
+//             bottom: 250px;
+//             right: 590px;
+//             transform: translate(310px, 50px);
+
+//             .fa-chevron-down {
+//                 font-size: 2.8rem;
+//             }
+//         }
+
+//     }
+
+//     #project-image {
+//         height: 350px;
+//         width: 400px;
+//         background-position: center;
+//         background-repeat: no-repeat;
+//         background-size: cover;
+//         z-index: 101;
+//         position: relative;
+//         right: 350px;
+//         transform: translate(140px, 0);
+//     }
+
+//     &.anim-next {
+//         pointer-events: none;
+
+//         #current-project-text1 {
+//             animation: next-text 0.65s 0.085s;
+//         }
+
+//         #current-project-text2 {
+//             animation: next-text 0.65s 0.085s;
+//         }
+
+//         #next {
+//             animation: next-bottom-arrow 0.65s 0.085s;
+//         }
+
+//         #project-image {
+//             animation: next-image 0.65s 0.085s;
+//         }
+//     }
+// }
+
+// @keyframes next-text {
+
+//     50%,
+//     55% {
+//         transform: translate(0%, -390px);
+//     }
+
+//     to {
+//         transform: translate(0%, -380px);
+//     }
+// }
+
+// @keyframes next-image {
+//     0% {
+//         transform: translate(140px, 0) scale(1);
+//         opacity: 1;
+//     }
+
+//     70% {
+//         transform: translate(140px, 0) scale(1.1);
+//         opacity: 0;
+//     }
+
+//     100% {
+//         transform: translate(140px, 0) scale(1);
+//         opacity: 1;
+//     }
+// }
+
+// // RESPONSIVE STYLING
+
+// /* Landscape phone to portrait tablet */
+// @media (max-width: 940px) {
+//     #carousel-wrapper {
+//         justify-content: space-between;
+
+//         #menu {
+//             #next {
+//                 right: 450px;
+//             }
+//         }
+
+//         #project-image {
+//             height: 300px;
+//             width: 350px;
+//             right: 200px;
+//         }
+//     }
+// }
+
+// @media (max-width: 768px) {
+//     #carousel-wrapper {
+//         #menu {
+//             #current-project {
+//                 #current-project-text1 {
+//                     font-size: 0.9rem;
+//                     width: 280px;
+//                 }
+//             }
+//         }
+
+//         #next {
+//             width: 1rem;
+//         }
+
+//         #project-image {
+//             height: 250px;
+//             width: 300px;
+//         }
+//     }
+
+// }
+
+// /* Landscape phones and down */
+// @media (max-width: 480px) {
+//     #carousel-wrapper {
+//         width: 100%;
+
+//         #menu {
+//             height: 100vh;
+
+//             #current-project {
+//                 height: 100vh;
+//                 left: 130px;
+//                 bottom: 0;
+
+//                 #current-project-text1 {
+//                     justify-content: flex-end;
+//                     font-size: 0.8rem;
+//                 }
+
+//                 #current-project-text2 {
+//                     padding-top: 20px;
+//                     justify-content: space-between;
+
+//                 }
+//             }
+
+//             #next {
+//                 top: 395px;
+//                 right: 528px;
+//             }
+//         }
+
+
+
+//         #project-image {
+//             height: 200px;
+//             width: 250px;
+//             right: 255px;
+//             top: 2460px;
+//         }
+//     }
+// }
+
+// /*iPhone 12 (so it looks nice on my phone)*/
+
+// @media (max-width: 390px) {
+//     #carousel-wrapper {
+//         width: 100%;
+
+//         #menu {
+//             height: 80vh;
+
+//             #current-project {
+//                 left: 87px;
+//                 top: 30px;
+
+//                 #current-project-text2 {
+//                     padding-top: 20px;
+//                     justify-content: space-around;
+
+//                 }
+
+//                 #next {
+//                     right: 320px;
+//                     top: 560px;
+//                     width: 100%;
+//                 }
+//             }
+
+//         }
+
+//         #project-image {
+//             top: 2881px;
+//             right: 210px;
+//         }
+//     }
+
+// }
