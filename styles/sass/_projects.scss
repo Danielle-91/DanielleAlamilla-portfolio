@@ -8,6 +8,10 @@
     justify-content: center;
     align-items: center;
 
+    .test {
+        display: none;
+    }
+
     .carousel {
         max-width: 900px;
         max-height: 550px;
@@ -16,6 +20,7 @@
         display: flex;
         overflow: hidden;
         position: relative;
+        visibility: visible;
 
         .carouselItem {
             visibility: visible;
@@ -25,14 +30,13 @@
             align-items: center;
             justify-content: flex-end;
             position: absolute;
-            background: #fff;
             flex-shrink: 0;
             z-index: 0;
             transition: 0.6s all linear;
 
             .carouselItemImg {
                 width: 60%;
-                height: 100%;
+                height: 90%;
                 order: 2;
                 align-self: flex-end;
                 flex-basis: 60%;
@@ -43,11 +47,7 @@
                 z-index: 3;
                 transform: translateX(100%);
                 transition: 0.6s all ease-in-out;
-
-
             }
-
-
 
             .carouselItemInfo {
                 height: 100%;
@@ -60,10 +60,8 @@
                 padding: 0 40px;
                 width: 40%;
 
-
-
                 .carouselItemTitle {
-                    margin: 15px 0 0 0;
+                    margin: 15px 0 30px 0;
                     font-size: 2.2rem;
                     line-height: 45px;
                     letter-spacing: 3px;
@@ -75,7 +73,7 @@
 
                 .carouselItemSubtitle {
                     letter-spacing: 3px;
-                    font-size: 0.5rem;
+                    font-size: 0.7rem;
                     margin: 0;
                     transform: translateY(25%);
                     opacity: 0;
@@ -88,19 +86,14 @@
                     opacity: 0;
                     visibility: hidden;
                     transition: 0.6s all ease-in-out;
+                    text-align: left;
                     margin-top: 35px;
                     margin-bottom: 35px;
-                    font-size: 13px;
+                    font-size: 0.8rem;
                     line-height: 22px;
                 }
-
-
             }
-
-
         }
-
-
 
         .carouselItemBtn {
             width: 35%;
@@ -115,7 +108,6 @@
         }
 
         .carouselNav {
-            border: 2px solid blue;
             position: absolute;
             right: 0;
             bottom: 0;
@@ -170,334 +162,85 @@
     }
 }
 
-.carouselItem1 {
-    border: 2px solid blue;
+.carouselItem1 .carouselItemImg {
+    background-image: url('../assets/captured_mockup.jpg');
+}
 
-    div.carouselImg {
-        background-image: url('../assets/captured_mockup.jpg');
-        border: 2px solid red;
 
+.carouselItem2 .carouselItemImg {
+    background-image: url('../assets/atw_mockup.jpg');
+}
+
+.carouselItem3 .carouselItemImg {
+    background-image: url('../assets/rp_mockup.jpg');
+}
+
+/* RESPONSIVE STYLE */
+
+@media(max-width: 900px) {
+    .projects {
+        .carousel {
+            width: 700px;
+            height: 450px;
+
+            .carouselItem {
+                .carouselItemInfo {
+                    .carouselItemTitle {
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
     }
 }
 
-.carouselItem2 {
-    background-image: url('../assets/atw_mockup.jpg');
-    border: 2px solid pink;
+@media(max-width: 660px) {
+    .projects {
+        .test {
+            display: block;
+        }
+
+        // height: 900px;
+
+        // h2 {
+        //     margin-bottom: 20px;
+        // }
+
+        .carousel {
+            display: none;
+            // height: 100%;
+            // width: 80%;
+
+            // .carouselItem {
+            //     height: 717px;
+            //     flex-direction: column-reverse;
+            //     justify-content: space-evenly;
+
+            //     .carouselItemImg {
+            //         width: 80%;
+            //         height: 660px;
+            //         object-fit: fill;
+            //     }
+
+            //     .carouselItemInfo {
+            //         flex-direction: row;
+            //         width: 100%;
+            //         height: 800px;
+
+            //         .carouselItemContainer {
+            //             text-align: center;
+            //         }
+
+            //         .carouselItemDescription {
+            //             text-align: center;
+            //             margin-bottom: 0;
+            //         }
+            //     }
+        }
+
+        // .carouselNav {
+        //     top: 485px;
+        //     left: 291px;
+        // }
+    }
 }
-
-.carouselItem3 {
-    background-image: url('../assets/rp_mockup.jpg');
-    border: 2px solid green;
-}
-
-
-
-// .projects {
-//     height: 100vh;
-// }
-
-// #carousel-wrapper {
-//     border: 2px solid red;
-//     max-width: 1800px;
-//     width: 60%;
-//     height: auto;
-//     margin: 0 auto;
-//     display: flex;
-//     flex-direction: row;
-//     align-items: center;
-//     justify-content: center;
-//     overflow: hidden;
-//     position: absolute;
-//     left: 0;
-//     right: 0;
-
-//     #menu {
-//         border: 2px solid white;
-//         margin: 30px;
-//         height: auto;
-//         width: 100%;
-//         overflow: hidden;
-//         line-height: 1;
-//         display: flex;
-//         flex-direction: row;
-//         align-items: center;
-//         justify-content: space-between;
-//         vertical-align: middle;
-//         transition: all 0.6s ease-in-out;
-
-//         #current-project {
-//             position: relative;
-//             width: 100%;
-//             height: 100%;
-//             transform: translate(-25%, 0%);
-//             display: flex;
-//             flex-direction: column;
-//             align-items: center;
-//             justify-content: center;
-//             overflow: hidden;
-
-//             #current-project-text1 {
-//                 font-size: 1rem;
-//                 line-height: 1.4rem;
-//                 width: 350px;
-//                 height: 300px;
-//                 display: flex;
-//                 flex-direction: column;
-//                 align-items: center;
-//                 justify-content: center;
-
-//                 &::before {
-//                     content: attr(data-next-text);
-//                     position: absolute;
-//                     transform: translate(0%, 380px);
-//                     width: 100%;
-//                     height: 200px;
-//                     display: flex;
-//                     flex-direction: column;
-//                     align-items: center;
-//                     justify-content: flex-start;
-//                 }
-//             }
-
-//             #current-project-text2 {
-//                 text-align: left;
-//                 font-size: 1rem;
-//                 width: 300px;
-//                 height: 40px;
-//                 display: flex;
-//                 flex-direction: row;
-//                 align-items: flex-start;
-//                 justify-content: space-evenly;
-//                 transition: all 1s;
-
-//                 &::before {
-//                     position: absolute;
-//                     transform: translate(0%, 380px);
-//                     width: 100%;
-//                     height: 40px;
-//                     display: flex;
-//                     flex-direction: column;
-//                     align-items: flex-start;
-//                     justify-content: flex-end;
-//                 }
-
-//                 :hover {
-//                     transform: scale(1.1);
-//                     color: rgb(239, 229, 229);
-//                     text-shadow:
-//                         0 0 2px #fff,
-//                         0 0 3px #000,
-//                         0 0 15px #fff,
-//                         0 0 18px #ffabaa,
-//                         0 0 69px #ffabaa,
-//                         0 0 39px #ffabaa,
-//                         0 0 87px #ffabaa,
-//                         0 0 69px #ffabaa;
-//                 }
-
-//             }
-//         }
-
-//         #next {
-//             background: rgb(12, 12, 12);
-//             border-radius: 5px;
-//             width: 1.5rem;
-//             height: 1.5rem;
-//             border: none;
-//             display: block;
-//             cursor: pointer;
-//             position: absolute;
-//             bottom: 250px;
-//             right: 590px;
-//             transform: translate(310px, 50px);
-
-//             .fa-chevron-down {
-//                 font-size: 2.8rem;
-//             }
-//         }
-
-//     }
-
-//     #project-image {
-//         height: 350px;
-//         width: 400px;
-//         background-position: center;
-//         background-repeat: no-repeat;
-//         background-size: cover;
-//         z-index: 101;
-//         position: relative;
-//         right: 350px;
-//         transform: translate(140px, 0);
-//     }
-
-//     &.anim-next {
-//         pointer-events: none;
-
-//         #current-project-text1 {
-//             animation: next-text 0.65s 0.085s;
-//         }
-
-//         #current-project-text2 {
-//             animation: next-text 0.65s 0.085s;
-//         }
-
-//         #next {
-//             animation: next-bottom-arrow 0.65s 0.085s;
-//         }
-
-//         #project-image {
-//             animation: next-image 0.65s 0.085s;
-//         }
-//     }
-// }
-
-// @keyframes next-text {
-
-//     50%,
-//     55% {
-//         transform: translate(0%, -390px);
-//     }
-
-//     to {
-//         transform: translate(0%, -380px);
-//     }
-// }
-
-// @keyframes next-image {
-//     0% {
-//         transform: translate(140px, 0) scale(1);
-//         opacity: 1;
-//     }
-
-//     70% {
-//         transform: translate(140px, 0) scale(1.1);
-//         opacity: 0;
-//     }
-
-//     100% {
-//         transform: translate(140px, 0) scale(1);
-//         opacity: 1;
-//     }
-// }
-
-// // RESPONSIVE STYLING
-
-// /* Landscape phone to portrait tablet */
-// @media (max-width: 940px) {
-//     #carousel-wrapper {
-//         justify-content: space-between;
-
-//         #menu {
-//             #next {
-//                 right: 450px;
-//             }
-//         }
-
-//         #project-image {
-//             height: 300px;
-//             width: 350px;
-//             right: 200px;
-//         }
-//     }
-// }
-
-// @media (max-width: 768px) {
-//     #carousel-wrapper {
-//         #menu {
-//             #current-project {
-//                 #current-project-text1 {
-//                     font-size: 0.9rem;
-//                     width: 280px;
-//                 }
-//             }
-//         }
-
-//         #next {
-//             width: 1rem;
-//         }
-
-//         #project-image {
-//             height: 250px;
-//             width: 300px;
-//         }
-//     }
-
-// }
-
-// /* Landscape phones and down */
-// @media (max-width: 480px) {
-//     #carousel-wrapper {
-//         width: 100%;
-
-//         #menu {
-//             height: 100vh;
-
-//             #current-project {
-//                 height: 100vh;
-//                 left: 130px;
-//                 bottom: 0;
-
-//                 #current-project-text1 {
-//                     justify-content: flex-end;
-//                     font-size: 0.8rem;
-//                 }
-
-//                 #current-project-text2 {
-//                     padding-top: 20px;
-//                     justify-content: space-between;
-
-//                 }
-//             }
-
-//             #next {
-//                 top: 395px;
-//                 right: 528px;
-//             }
-//         }
-
-
-
-//         #project-image {
-//             height: 200px;
-//             width: 250px;
-//             right: 255px;
-//             top: 2460px;
-//         }
-//     }
-// }
-
-// /*iPhone 12 (so it looks nice on my phone)*/
-
-// @media (max-width: 390px) {
-//     #carousel-wrapper {
-//         width: 100%;
-
-//         #menu {
-//             height: 80vh;
-
-//             #current-project {
-//                 left: 87px;
-//                 top: 30px;
-
-//                 #current-project-text2 {
-//                     padding-top: 20px;
-//                     justify-content: space-around;
-
-//                 }
-
-//                 #next {
-//                     right: 320px;
-//                     top: 560px;
-//                     width: 100%;
-//                 }
-//             }
-
-//         }
-
-//         #project-image {
-//             top: 2881px;
-//             right: 210px;
-//         }
-//     }
-
-// }

@@ -17,7 +17,7 @@ section {
 
 .wrapper {
     max-width: 1300px;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     padding: 30px;
 }
@@ -76,6 +76,7 @@ a {
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
     .wrapper {
-        width: 90%;
+        width: 100%;
+        padding: 0;
     }
 }
