@@ -8,7 +8,7 @@
     justify-content: center;
     align-items: center;
 
-    .test {
+    .projectContainer {
         display: none;
     }
 
@@ -181,7 +181,7 @@
     .projects {
         .carousel {
             width: 700px;
-            height: 450px;
+            height: 550px;
 
             .carouselItem {
                 .carouselItemInfo {
@@ -196,51 +196,12 @@
 
 @media(max-width: 660px) {
     .projects {
-        .test {
-            display: block;
+        .projectContainer {
+            display: flex;
         }
-
-        // height: 900px;
-
-        // h2 {
-        //     margin-bottom: 20px;
-        // }
 
         .carousel {
             display: none;
-            // height: 100%;
-            // width: 80%;
-
-            // .carouselItem {
-            //     height: 717px;
-            //     flex-direction: column-reverse;
-            //     justify-content: space-evenly;
-
-            //     .carouselItemImg {
-            //         width: 80%;
-            //         height: 660px;
-            //         object-fit: fill;
-            //     }
-
-            //     .carouselItemInfo {
-            //         flex-direction: row;
-            //         width: 100%;
-            //         height: 800px;
-
-            //         .carouselItemContainer {
-            //             text-align: center;
-            //         }
-
-            //         .carouselItemDescription {
-            //             text-align: center;
-            //             margin-bottom: 0;
-            //         }
-            //     }
         }
-
-        // .carouselNav {
-        //     top: 485px;
-        //     left: 291px;
-        // }
     }
 }

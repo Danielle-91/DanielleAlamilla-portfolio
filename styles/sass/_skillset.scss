@@ -123,3 +123,14 @@
             }
         }
     }
+
+    @media (max-width: 320px) {
+        .skillContainer ul li {
+            padding: 10px;
+            width: calc(100% / 3 - 20px);
+
+            i {
+                font-size: 1.5rem;
+            }
+        }
+    }

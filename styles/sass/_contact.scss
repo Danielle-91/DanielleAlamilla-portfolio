@@ -15,8 +15,27 @@
 
 @media (max-width: 390px) {
     .contact .wrapper {
+        max-width: 400px;
         width: 100%;
         margin: 0;
         padding: 0;
+    }
+}
+
+@media (max-width: 420px) {
+    .contact .wrapper {
+        width: 100%;
+    }
+}
+
+@media (max-width: 365px) {
+    .contact p {
+        width: 330px;
+    }
+}
+
+@media (max-width: 320px) {
+    .contact p {
+        width: 300px;
     }
 }

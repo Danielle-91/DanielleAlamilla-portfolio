@@ -64,6 +64,10 @@ a {
     text-decoration: none;
 }
 
+img {
+    width: 100%;
+}
+
 // Option to turn off flickering header if user has prefers-reduced-motion enabled:
 @media screen and (prefers-reduced-motion) {
     h1 {
@@ -78,5 +82,11 @@ a {
     .wrapper {
         width: 100%;
         padding: 0;
+    }
+}
+
+@media (max-width: 640px) {
+    .wrapper {
+        width: 80%;
     }
 }
