@@ -7,6 +7,7 @@
             justify-content: center;
             flex-wrap: wrap;
             width: 100%;
+            padding-left: 0;
 
             li {
                 text-align: center;
@@ -119,6 +120,17 @@
                 width: calc(100% / 3 - 20px);
                 padding: 10px;
 
+            }
+        }
+    }
+
+    @media (max-width: 320px) {
+        .skillContainer ul li {
+            padding: 10px;
+            width: calc(100% / 3 - 20px);
+
+            i {
+                font-size: 1.5rem;
             }
         }
     }

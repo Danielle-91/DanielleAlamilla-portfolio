@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <title>Danielle the Dev</title>
     <link rel="stylesheet" href="./styles/style.css">
 
@@ -17,6 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Archivo&display=swap" rel="stylesheet">
 
     <script src="https://kit.fontawesome.com/dfc0c19384.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -41,7 +43,8 @@
         <div class="headTextCard">
             <div class="headerIntro">
                 <h1>Danielle the Developer</h1>
-                <p>Danielle Alamilla (A-la-ME-yah) is a Front-End Developer and graduate of Juno College's Web
+                <p>Danielle Alamilla (A-la-ME-yah) is a Front-End Developer and graduate of Juno
+                    College's Web
                     Development Bootcamp.</p>
             </div>
         </div>
@@ -62,7 +65,7 @@
                         slasher movies and trivia. Did you know there's a <a
                             href="https://www.cbc.ca/news/entertainment/italian-finds-hidden-music-in-leonardo-s-last-supper-1.642120">secret
                             song</a> hidden in the Last Supper? <span>For any website needs or useless knowledge needs,
-                            get in touch using the form below, or at:</span>
+                            get in touch by email, or at:</span>
 
                         <a href="https://github.com/Danielle-91?tab=repositories"><i class="fab fa-github"></i><span
                                 class="sr-only">Github</span></a>
@@ -104,22 +107,127 @@
         </section>
 
         <section class="projects" id="projects">
-            <h2>Projects</h2>
+            <div class="wrapper">
+                <h2>Projects</h2>
 
-            <div id="carousel-wrapper">
+                <div class="carousel">
 
-                <div id="menu">
+                    <div class="carouselNav">
 
-                    <div id="current-project">
-                        <span id="current-project-text1" data-previous-text="" data-next-text=""></span>
-                        <span id="current-project-text2" data-previous-text="" data-next-text=""></span>
-                        <button id="next"><i class="fa-solid fa-chevron-down"></i></button>
+                        <span id="moveLeft" class="carouselArrow">
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </span>
+
+                        <span id="moveRight" class="carouselArrow">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+
                     </div>
 
-                    <div id="project-image"></div>
+                    <div class="carouselItem carouselItem1">
+                        <div class="carouselItemImg"></div>
+                        <div class="carouselItemInfo">
+                            <div class="carouselItemContainer">
+                                <h2 class="carouselItemTitle">Captured</h2>
+                                <h3 class="carouselItemSubtitle">HTML | SCSS | Flexbox</h3>
+                                <p class="carouselItemDescription">Captured is a multi-page PSD conversion created from
+                                    a
+                                    client brief and design files, made responsive using Flexbox layout.</p>
+                                <a href="https://github.com/Danielle-91/Danielle-Alamilla-Project-1"
+                                    class="carouselItemBtn">Github <span>|</span></a>
+                                <a href="https://jovial-liskov-ad8802.netlify.app/" class="carouselItemBtn">Live
+                                    Site</a>
 
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carouselItem carouselItem2">
+                        <div class="carouselItemImg"></div>
+                        <div class="carouselItemInfo">
+                            <div class="carouselItemContainer">
+                                <h2 class="carouselItemTitle">Around the World</h2>
+                                <h3 class="carouselItemSubtitle">JavaScript | CSS | API | Pair Programming</h3>
+                                <p class="carouselItemDescription">Kelvin Lee and I created the Around the World quiz to
+                                    test your knowledge on flags of the world using vanilla JavaScript
+                                    and the Rest Countries API. Give it a try!</p>
+                                <a href="https://github.com/TheNoBonesZone/aroundTheWorldQuiz"
+                                    class="carouselItemBtn">Github <span>|</span></a>
+                                <a href="https://aroundtheworldwithdk.netlify.app/" class="carouselItemBtn">Live
+                                    Site</a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carouselItem carouselItem3">
+                        <div class="carouselItemImg"></div>
+                        <div class="carouselItemInfo">
+                            <div class="carouselItemContainer">
+                                <h2 class="carouselItemTitle">Record + Play</h2>
+                                <h3 class="carouselItemSubtitle">React | API | CSS</h3>
+                                <p class="carouselItemDescription">Record + Play is a mixtape - maker created in React
+                                    using
+                                    the iTunes API.Type in the name of your favourite artists and
+                                    it will return a list of ten of their songs for you to use as your very own mixtape.
+                                </p>
+                                <a href="https://github.com/Danielle-91/Danielle-Alamilla-Project-3"
+                                    class="carouselItemBtn">Github <span>|</span></a>
+                                <a href="https://kind-ardinghelli-c4eb63.netlify.app/" class="carouselItemBtn">Live
+                                    Site</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Responsive Project Section -->
+
+                <div class="projectContainer">
+                    <img src="./assets/captured_mockup.jpg"
+                        alt="Hand resting on a wooden table scrolling a phone with image of Captured website"
+                        class="responsiveProImg">
+                    <h2>Captured</h2>
+                    <h3>HTML | SCSS | Flexbox</h3>
+                    <p>Captured is a multi-page PSD conversion created from
+                        a
+                        client brief and design files, made responsive using Flexbox layout.</p>
+                    <div class="proLinks">
+                        <a href="https://github.com/Danielle-91/Danielle-Alamilla-Project-1">Github</a>
+                        <a href="https://jovial-liskov-ad8802.netlify.app/">Live Site</a>
+                    </div>
+
+                    <img src="./assets/atw_mockup.jpg"
+                        alt="Tablet resting on a concrete surface, appearing to be outside. A hand points at the screen displaying the Around the World quiz site"
+                        class="responsiveProImg">
+                    <h2>Around the World</h2>
+                    <h3>JavaScript | CSS | API | Pair Programming</h3>
+                    <p>Kelvin Lee and I created the Around the World quiz to
+                        test your knowledge on flags of the world using vanilla JavaScript
+                        and the Rest Countries API. Give it a try!</p>
+                    <div class="proLinks">
+                        <a href="https://github.com/TheNoBonesZone/aroundTheWorldQuiz">Github</a>
+                        <a href="https://aroundtheworldwithdk.netlify.app/">Live Site</a>
+                    </div>
+
+
+                    <img src="./assets/rp_mockup.jpg"
+                        alt="Laptop on a desk in a neon blue and pink lit room, screen displaying header of Record + Play website"
+                        class="responsiveProImg">
+                    <h2>Record + Play</h2>
+                    <h3>React | API | CSS</h3>
+                    <p>Record + Play is a mixtape - maker created in React
+                        using
+                        the iTunes API.Type in the name of your favourite artists and
+                        it will return a list of ten of their songs for you to use as your very own mixtape.</p>
+                    <div class="proLinks">
+                        <a href="https://github.com/Danielle-91/Danielle-Alamilla-Project-3">Github</a>
+                        <a href="https://kind-ardinghelli-c4eb63.netlify.app/">Live Site</a>
+                    </div>
                 </div>
             </div>
+
+
         </section>
 
         <section class="contact" id="contact">
@@ -132,7 +240,10 @@
     </main>
 
     <footer>
-        <p>Danielle Alamilla © 2021</p>
+        <div class="wrapper">
+            <p>Danielle Alamilla © 2021</p>
+
+        </div>
     </footer>
 
     <script src="projectCarousel.js"></script>

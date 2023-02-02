@@ -17,7 +17,7 @@ section {
 
 .wrapper {
     max-width: 1300px;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     padding: 30px;
 }
@@ -64,6 +64,10 @@ a {
     text-decoration: none;
 }
 
+img {
+    width: 100%;
+}
+
 // Option to turn off flickering header if user has prefers-reduced-motion enabled:
 @media screen and (prefers-reduced-motion) {
     h1 {
@@ -76,6 +80,13 @@ a {
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
     .wrapper {
-        width: 90%;
+        width: 100%;
+        padding: 0;
+    }
+}
+
+@media (max-width: 640px) {
+    .wrapper {
+        width: 80%;
     }
 }
