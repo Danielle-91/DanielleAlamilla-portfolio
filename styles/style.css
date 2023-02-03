@@ -913,6 +913,7 @@ header {
   display: flex;
   overflow: hidden;
   position: relative;
+  margin: 0 auto;
   visibility: visible;
 }
 .projects .carousel .carouselItem {
